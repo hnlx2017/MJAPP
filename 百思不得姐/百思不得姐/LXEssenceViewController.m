@@ -11,5 +11,15 @@
 @implementation LXEssenceViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
+    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
+    
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(essenceClick)];
+    
 }
+
+- (void)essenceClick{
+    LXLogFunc;
+    
+}
+                                             
 @end

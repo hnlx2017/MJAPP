@@ -9,7 +9,16 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 #import "UIView+LXExtension.h"
+#import "UIBarButtonItem+LXExtension.h"
 
+#ifdef DEBUG 
+#define LXLog(...) NSLog(__VA_ARGS__)
+
+#else
+#define LXLog(...) 
+
+#endif
+#define LXLogFunc  LXLog(@"%s",__func__)
 
 
 #endif /* PrefixHeader_pch */

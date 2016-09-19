@@ -17,6 +17,7 @@
 		CAB31AE11D8FBDA1008F84CB /* LXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE01D8FBDA1008F84CB /* LXMeViewController.m */; };
 		CAB31AE41D8FBFBD008F84CB /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */; };
 		CAB31AE71D8FC965008F84CB /* UIView+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */; };
+		CAB31AEB1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AEA1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,8 @@
 		CAB31AE51D8FC965008F84CB /* UIView+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXExtension.h"; sourceTree = "<group>"; };
 		CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXExtension.m"; sourceTree = "<group>"; };
 		CAB31AE81D8FCA2C008F84CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CAB31AE91D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LXExtension.h"; sourceTree = "<group>"; };
+		CAB31AEA1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LXExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */,
 				CAB31AE51D8FC965008F84CB /* UIView+LXExtension.h */,
 				CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */,
+				CAB31AE91D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.h */,
+				CAB31AEA1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m */,
 				CAB31AE81D8FCA2C008F84CB /* PrefixHeader.pch */,
 				CAB31ABC1D8F968F008F84CB /* Supporting Files */,
 			);
@@ -176,6 +181,7 @@
 			files = (
 				CAB31ADE1D8FBD8E008F84CB /* LXFriendTrendsViewController.m in Sources */,
 				CAB31AC11D8F968F008F84CB /* AppDelegate.m in Sources */,
+				CAB31AEB1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
 				CAB31AD81D8FBD4E008F84CB /* LXEssenceViewController.m in Sources */,
 				CAB31AD51D8FB25C008F84CB /* LXTabBarcontroller.m in Sources */,
 				CAB31AE71D8FC965008F84CB /* UIView+LXExtension.m in Sources */,
