@@ -11,6 +11,7 @@
 #import "LXNewViewController.h"
 #import "LXFriendTrendsViewController.h"
 #import "LXMeViewController.h"
+#import "LXTabBar.h"
 
 @implementation LXTabBarcontroller
 - (void)viewDidLoad{
@@ -37,6 +38,10 @@
     [self setupChildVC:[[LXFriendTrendsViewController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
    
     [self setupChildVC:[[LXMeViewController alloc]init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+    
+    [self setValue:[[LXTabBar alloc]init] forKeyPath:@"tabBar"];
+    
+  
    
     
     
