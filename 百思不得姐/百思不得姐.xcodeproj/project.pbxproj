@@ -20,6 +20,8 @@
 		CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B141D8FD88B008F84CB /* LXTabBar.m */; };
 		CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */; };
 		CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */; };
+		CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABD07F11D905CED00764BCC /* LXRecommendViewController.m */; };
+		CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,9 @@
 		CAB31B1F1D8FE0E3008F84CB /* LXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNavigationController.h; sourceTree = "<group>"; };
 		CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNavigationController.m; sourceTree = "<group>"; };
 		CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXFriendTrendsViewController.xib; sourceTree = "<group>"; };
+		CABD07F01D905CED00764BCC /* LXRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendViewController.h; sourceTree = "<group>"; };
+		CABD07F11D905CED00764BCC /* LXRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendViewController.m; sourceTree = "<group>"; };
+		CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +162,9 @@
 				CAB31AF51D8FD88B008F84CB /* LXFriendTrendsViewController.h */,
 				CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */,
 				CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */,
+				CABD07F01D905CED00764BCC /* LXRecommendViewController.h */,
+				CABD07F11D905CED00764BCC /* LXRecommendViewController.m */,
+				CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -344,6 +352,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */,
 				CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */,
 				CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */,
 			);
@@ -363,6 +372,7 @@
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
 				CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
+				CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */,
 				CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */,
 				CAB31B1D1D8FD88B008F84CB /* main.m in Sources */,
 				CAB31B191D8FD88B008F84CB /* AppDelegate.m in Sources */,
@@ -502,6 +512,7 @@
 				CAB31AD21D8F968F008F84CB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
