@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LXTabBarcontroller.h
 //  百思不得姐
 //
 //  Created by LiuXing on 16/9/19.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface LXTabBarcontroller : UITabBarController
 
 @end
-

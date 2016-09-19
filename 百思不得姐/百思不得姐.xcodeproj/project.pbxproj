@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CAB31ABE1D8F968F008F84CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31ABD1D8F968F008F84CB /* main.m */; };
 		CAB31AC11D8F968F008F84CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AC01D8F968F008F84CB /* AppDelegate.m */; };
-		CAB31AC41D8F968F008F84CB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AC31D8F968F008F84CB /* ViewController.m */; };
 		CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB31AC81D8F968F008F84CB /* Images.xcassets */; };
+		CAB31AD51D8FB25C008F84CB /* LXTabBarcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AD41D8FB25C008F84CB /* LXTabBarcontroller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,10 +18,10 @@
 		CAB31ABD1D8F968F008F84CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CAB31ABF1D8F968F008F84CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		CAB31AC01D8F968F008F84CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		CAB31AC21D8F968F008F84CB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		CAB31AC31D8F968F008F84CB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CAB31AC81D8F968F008F84CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAB31ACD1D8F968F008F84CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CAB31AD31D8FB25C008F84CB /* LXTabBarcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBarcontroller.h; sourceTree = "<group>"; };
+		CAB31AD41D8FB25C008F84CB /* LXTabBarcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarcontroller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,8 +56,8 @@
 			children = (
 				CAB31ABF1D8F968F008F84CB /* AppDelegate.h */,
 				CAB31AC01D8F968F008F84CB /* AppDelegate.m */,
-				CAB31AC21D8F968F008F84CB /* ViewController.h */,
-				CAB31AC31D8F968F008F84CB /* ViewController.m */,
+				CAB31AD31D8FB25C008F84CB /* LXTabBarcontroller.h */,
+				CAB31AD41D8FB25C008F84CB /* LXTabBarcontroller.m */,
 				CAB31ABC1D8F968F008F84CB /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -99,6 +99,7 @@
 		CAB31AB11D8F968F008F84CB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LX;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = kmznst;
 				TargetAttributes = {
@@ -141,8 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB31AC41D8F968F008F84CB /* ViewController.m in Sources */,
 				CAB31AC11D8F968F008F84CB /* AppDelegate.m in Sources */,
+				CAB31AD51D8FB25C008F84CB /* LXTabBarcontroller.m in Sources */,
 				CAB31ABE1D8F968F008F84CB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
