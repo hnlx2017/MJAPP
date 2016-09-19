@@ -17,11 +17,10 @@
 
 
 @implementation LXTabBarcontroller
-
-
-
-- (void)viewDidLoad{
-    [super viewDidLoad];
+/**
+ *  统一，一次性设置字体属性
+ */
++ (void)initialize{
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     dict[NSFontAttributeName] = [UIFont systemFontOfSize:12];
@@ -34,6 +33,13 @@
     
     [item setTitleTextAttributes:dict forState:UIControlStateNormal];
     [item setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
+}
+
+
+
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
     
   
     [self setupChildVC:[[LXEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
@@ -47,10 +53,6 @@
     
     [self setValue:[[LXTabBar alloc]init] forKeyPath:@"tabBar"];
 
-    
-  
-   
-    
     
 }
 

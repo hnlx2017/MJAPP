@@ -9,9 +9,17 @@
 #import "LXNavigationController.h"
 
 @implementation LXNavigationController
+
+/**
+ *  当第一次使用这个类，会调用一次（只调有一次）对于一次性设置，一般放在这里
+ */
++ (void)initialize{
+     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+}
+
 - (void)viewDidLoad{
     [super viewDidLoad];
-     [[UINavigationBar appearanceWhenContainedIn:[self class], nil] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+    
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
