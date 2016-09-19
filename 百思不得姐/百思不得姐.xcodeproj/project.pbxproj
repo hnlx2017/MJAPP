@@ -19,6 +19,7 @@
 		CAB31B1D1D8FD88B008F84CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B101D8FD88B008F84CB /* main.m */; };
 		CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B141D8FD88B008F84CB /* LXTabBar.m */; };
 		CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */; };
+		CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +48,7 @@
 		CAB31B141D8FD88B008F84CB /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
 		CAB31B1F1D8FE0E3008F84CB /* LXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNavigationController.h; sourceTree = "<group>"; };
 		CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNavigationController.m; sourceTree = "<group>"; };
+		CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXFriendTrendsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 			children = (
 				CAB31AF51D8FD88B008F84CB /* LXFriendTrendsViewController.h */,
 				CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */,
+				CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */,
 				CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
