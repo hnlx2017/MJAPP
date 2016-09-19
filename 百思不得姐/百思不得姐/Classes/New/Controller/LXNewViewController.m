@@ -19,6 +19,8 @@
 }
 
 - (void)newClick{
-     LXLogFunc;
+    UIViewController *vc = [[UIViewController alloc]init];
+    vc.view.backgroundColor = [UIColor purpleColor];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 @end

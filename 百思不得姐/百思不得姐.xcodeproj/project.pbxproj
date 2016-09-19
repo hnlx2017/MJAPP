@@ -18,6 +18,7 @@
 		CAB31B1C1D8FD88B008F84CB /* LXTabBarcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B0F1D8FD88B008F84CB /* LXTabBarcontroller.m */; };
 		CAB31B1D1D8FD88B008F84CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B101D8FD88B008F84CB /* main.m */; };
 		CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B141D8FD88B008F84CB /* LXTabBar.m */; };
+		CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,8 @@
 		CAB31B111D8FD88B008F84CB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		CAB31B131D8FD88B008F84CB /* LXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBar.h; sourceTree = "<group>"; };
 		CAB31B141D8FD88B008F84CB /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
+		CAB31B1F1D8FE0E3008F84CB /* LXNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNavigationController.h; sourceTree = "<group>"; };
+		CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +268,8 @@
 			children = (
 				CAB31B0E1D8FD88B008F84CB /* LXTabBarcontroller.h */,
 				CAB31B0F1D8FD88B008F84CB /* LXTabBarcontroller.m */,
+				CAB31B1F1D8FE0E3008F84CB /* LXNavigationController.h */,
+				CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -354,6 +359,7 @@
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
 				CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
+				CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */,
 				CAB31B1D1D8FD88B008F84CB /* main.m in Sources */,
 				CAB31B191D8FD88B008F84CB /* AppDelegate.m in Sources */,
 				CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */,

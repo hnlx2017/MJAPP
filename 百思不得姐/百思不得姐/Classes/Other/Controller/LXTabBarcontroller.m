@@ -12,6 +12,7 @@
 #import "LXFriendTrendsViewController.h"
 #import "LXMeViewController.h"
 #import "LXTabBar.h"
+#import "LXNavigationController.h"
 
 
 
@@ -58,10 +59,7 @@
     [vc.tabBarItem setImage:[UIImage imageNamed:image]];
     [vc.tabBarItem setSelectedImage:[UIImage imageNamed:seletedImage]];
     vc.tabBarItem.title = title;
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
-    
-     [[UINavigationBar appearanceWhenContainedIn:[nav class], nil] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
-  
+    LXNavigationController *nav = [[LXNavigationController alloc]initWithRootViewController:vc];
     [self addChildViewController:nav];
 }
 
