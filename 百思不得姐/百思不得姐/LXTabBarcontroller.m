@@ -7,49 +7,51 @@
 //
 
 #import "LXTabBarcontroller.h"
+#import "LXEssenceViewController.h"
+#import "LXNewViewController.h"
+#import "LXFriendTrendsViewController.h"
+#import "LXMeViewController.h"
 
 @implementation LXTabBarcontroller
 - (void)viewDidLoad{
     [super viewDidLoad];
     
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
-    dict[NSFontAttributeName] = [UIFont systemFontOfSize:14];
+    dict[NSFontAttributeName] = [UIFont systemFontOfSize:12];
     dict[NSForegroundColorAttributeName] = [UIColor grayColor];
     
     NSMutableDictionary *selectedDict = [NSMutableDictionary dictionary];
     selectedDict[NSFontAttributeName] = dict[NSForegroundColorAttributeName];
     selectedDict[NSForegroundColorAttributeName] = [UIColor darkGrayColor];
-    UITabBarItem *tabBar = [UITabBarItem appearanceWhenContainedIn:[self class], nil];
+    UITabBarItem *item = [UITabBarItem appearanceWhenContainedIn:[self class], nil];
     
-    [tabBar setTitleTextAttributes:dict forState:UIControlStateNormal];
-    [tabBar setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
+    [item setTitleTextAttributes:dict forState:UIControlStateNormal];
+    [item setTitleTextAttributes:selectedDict forState:UIControlStateSelected];
     
-    UIViewController *vc1 = [[UIViewController alloc]init];
-    vc1.view.backgroundColor = [UIColor redColor];
-    [vc1.tabBarItem setImage:[UIImage imageNamed:@"tabBar_essence_icon"]];
-    [vc1.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_essence_click_icon"]];
-    vc1.tabBarItem.title = @"精华";
+  
+    [self setupChildVC:[[LXEssenceViewController alloc]init] title:@"精华" image:@"tabBar_essence_icon" selectedImage:@"tabBar_essence_click_icon"];
+   
+    [self setupChildVC:[[LXNewViewController alloc]init] title:@"新贴" image:@"tabBar_new_icon" selectedImage:@"tabBar_new_click_icon"];
     
-    UIViewController *vc2 = [[UIViewController alloc]init];
-    [vc2.tabBarItem setImage:[UIImage imageNamed:@"tabBar_new_icon"]];
-    [vc2.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_new_click_icon"]];
-    vc2.view.backgroundColor = [UIColor yellowColor];
-    vc2.tabBarItem.title = @"新贴";
+   
+    [self setupChildVC:[[LXFriendTrendsViewController alloc]init] title:@"关注" image:@"tabBar_friendTrends_icon" selectedImage:@"tabBar_friendTrends_click_icon"];
+   
+    [self setupChildVC:[[LXMeViewController alloc]init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
+   
     
-    UIViewController *vc3 = [[UIViewController alloc]init];
-    [vc3.tabBarItem setImage:[UIImage imageNamed:@"tabBar_friendTrends_icon"]];
-    [vc3.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_friendTrends_click_icon"]];
-    vc3.view.backgroundColor = [UIColor purpleColor];
-    vc3.tabBarItem.title = @"关注";
     
-    UIViewController *vc4 = [[UIViewController alloc]init];
-    [vc4.tabBarItem setImage:[UIImage imageNamed:@"tabBar_me_icon"]];
-    [vc4.tabBarItem setSelectedImage:[UIImage imageNamed:@"tabBar_me_click_icon"]];
-    vc4.view.backgroundColor = [UIColor orangeColor];
-    vc4.tabBarItem.title = @"我";
-    
-    self.viewControllers = @[vc1,vc2,vc3,vc4];
 }
+
+- (void)setupChildVC:(UIViewController *)vc title:(NSString *)title image:(NSString *)image selectedImage:(NSString*)seletedImage{
+    
+    [vc.tabBarItem setImage:[UIImage imageNamed:image]];
+    [vc.tabBarItem setSelectedImage:[UIImage imageNamed:seletedImage]];
+    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
+    vc.tabBarItem.title = title;
+    
+    [self addChildViewController:vc];
+}
+
 
 
 @end
