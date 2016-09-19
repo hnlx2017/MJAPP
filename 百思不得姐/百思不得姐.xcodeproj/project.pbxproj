@@ -16,6 +16,7 @@
 		CAB31ADE1D8FBD8E008F84CB /* LXFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31ADD1D8FBD8E008F84CB /* LXFriendTrendsViewController.m */; };
 		CAB31AE11D8FBDA1008F84CB /* LXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE01D8FBDA1008F84CB /* LXMeViewController.m */; };
 		CAB31AE41D8FBFBD008F84CB /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */; };
+		CAB31AE71D8FC965008F84CB /* UIView+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,9 @@
 		CAB31AE01D8FBDA1008F84CB /* LXMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMeViewController.m; sourceTree = "<group>"; };
 		CAB31AE21D8FBFBD008F84CB /* LXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBar.h; sourceTree = "<group>"; };
 		CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
+		CAB31AE51D8FC965008F84CB /* UIView+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXExtension.h"; sourceTree = "<group>"; };
+		CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXExtension.m"; sourceTree = "<group>"; };
+		CAB31AE81D8FCA2C008F84CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,9 @@
 				CAB31AE01D8FBDA1008F84CB /* LXMeViewController.m */,
 				CAB31AE21D8FBFBD008F84CB /* LXTabBar.h */,
 				CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */,
+				CAB31AE51D8FC965008F84CB /* UIView+LXExtension.h */,
+				CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */,
+				CAB31AE81D8FCA2C008F84CB /* PrefixHeader.pch */,
 				CAB31ABC1D8F968F008F84CB /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -171,6 +178,7 @@
 				CAB31AC11D8F968F008F84CB /* AppDelegate.m in Sources */,
 				CAB31AD81D8FBD4E008F84CB /* LXEssenceViewController.m in Sources */,
 				CAB31AD51D8FB25C008F84CB /* LXTabBarcontroller.m in Sources */,
+				CAB31AE71D8FC965008F84CB /* UIView+LXExtension.m in Sources */,
 				CAB31ABE1D8F968F008F84CB /* main.m in Sources */,
 				CAB31AE41D8FBFBD008F84CB /* LXTabBar.m in Sources */,
 				CAB31ADB1D8FBD6B008F84CB /* LXNewViewController.m in Sources */,
@@ -268,6 +276,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -281,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
