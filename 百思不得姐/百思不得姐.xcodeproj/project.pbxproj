@@ -7,43 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CAB31ABE1D8F968F008F84CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31ABD1D8F968F008F84CB /* main.m */; };
-		CAB31AC11D8F968F008F84CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AC01D8F968F008F84CB /* AppDelegate.m */; };
 		CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB31AC81D8F968F008F84CB /* Images.xcassets */; };
-		CAB31AD51D8FB25C008F84CB /* LXTabBarcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AD41D8FB25C008F84CB /* LXTabBarcontroller.m */; };
-		CAB31AD81D8FBD4E008F84CB /* LXEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AD71D8FBD4E008F84CB /* LXEssenceViewController.m */; };
-		CAB31ADB1D8FBD6B008F84CB /* LXNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31ADA1D8FBD6B008F84CB /* LXNewViewController.m */; };
-		CAB31ADE1D8FBD8E008F84CB /* LXFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31ADD1D8FBD8E008F84CB /* LXFriendTrendsViewController.m */; };
-		CAB31AE11D8FBDA1008F84CB /* LXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE01D8FBDA1008F84CB /* LXMeViewController.m */; };
-		CAB31AE41D8FBFBD008F84CB /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */; };
-		CAB31AE71D8FC965008F84CB /* UIView+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */; };
-		CAB31AEB1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AEA1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m */; };
+		CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */; };
+		CAB31B161D8FD88B008F84CB /* LXFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */; };
+		CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AFC1D8FD88B008F84CB /* LXMeViewController.m */; };
+		CAB31B181D8FD88B008F84CB /* LXNewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B021D8FD88B008F84CB /* LXNewViewController.m */; };
+		CAB31B191D8FD88B008F84CB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B071D8FD88B008F84CB /* AppDelegate.m */; };
+		CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B0A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m */; };
+		CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B0C1D8FD88B008F84CB /* UIView+LXExtension.m */; };
+		CAB31B1C1D8FD88B008F84CB /* LXTabBarcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B0F1D8FD88B008F84CB /* LXTabBarcontroller.m */; };
+		CAB31B1D1D8FD88B008F84CB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B101D8FD88B008F84CB /* main.m */; };
+		CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B141D8FD88B008F84CB /* LXTabBar.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		CAB31AB91D8F968F008F84CB /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		CAB31ABD1D8F968F008F84CB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		CAB31ABF1D8F968F008F84CB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		CAB31AC01D8F968F008F84CB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		CAB31AC81D8F968F008F84CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAB31ACD1D8F968F008F84CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CAB31AD31D8FB25C008F84CB /* LXTabBarcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBarcontroller.h; sourceTree = "<group>"; };
-		CAB31AD41D8FB25C008F84CB /* LXTabBarcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarcontroller.m; sourceTree = "<group>"; };
-		CAB31AD61D8FBD4E008F84CB /* LXEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXEssenceViewController.h; sourceTree = "<group>"; };
-		CAB31AD71D8FBD4E008F84CB /* LXEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXEssenceViewController.m; sourceTree = "<group>"; };
-		CAB31AD91D8FBD6B008F84CB /* LXNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNewViewController.h; sourceTree = "<group>"; };
-		CAB31ADA1D8FBD6B008F84CB /* LXNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNewViewController.m; sourceTree = "<group>"; };
-		CAB31ADC1D8FBD8E008F84CB /* LXFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFriendTrendsViewController.h; sourceTree = "<group>"; };
-		CAB31ADD1D8FBD8E008F84CB /* LXFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFriendTrendsViewController.m; sourceTree = "<group>"; };
-		CAB31ADF1D8FBDA1008F84CB /* LXMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMeViewController.h; sourceTree = "<group>"; };
-		CAB31AE01D8FBDA1008F84CB /* LXMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMeViewController.m; sourceTree = "<group>"; };
-		CAB31AE21D8FBFBD008F84CB /* LXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBar.h; sourceTree = "<group>"; };
-		CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
-		CAB31AE51D8FC965008F84CB /* UIView+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXExtension.h"; sourceTree = "<group>"; };
-		CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXExtension.m"; sourceTree = "<group>"; };
-		CAB31AE81D8FCA2C008F84CB /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		CAB31AE91D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LXExtension.h"; sourceTree = "<group>"; };
-		CAB31AEA1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LXExtension.m"; sourceTree = "<group>"; };
+		CAB31AEF1D8FD88B008F84CB /* LXEssenceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXEssenceViewController.h; sourceTree = "<group>"; };
+		CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXEssenceViewController.m; sourceTree = "<group>"; };
+		CAB31AF51D8FD88B008F84CB /* LXFriendTrendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXFriendTrendsViewController.h; sourceTree = "<group>"; };
+		CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXFriendTrendsViewController.m; sourceTree = "<group>"; };
+		CAB31AFB1D8FD88B008F84CB /* LXMeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMeViewController.h; sourceTree = "<group>"; };
+		CAB31AFC1D8FD88B008F84CB /* LXMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMeViewController.m; sourceTree = "<group>"; };
+		CAB31B011D8FD88B008F84CB /* LXNewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNewViewController.h; sourceTree = "<group>"; };
+		CAB31B021D8FD88B008F84CB /* LXNewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNewViewController.m; sourceTree = "<group>"; };
+		CAB31B061D8FD88B008F84CB /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CAB31B071D8FD88B008F84CB /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CAB31B091D8FD88B008F84CB /* UIBarButtonItem+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+LXExtension.h"; sourceTree = "<group>"; };
+		CAB31B0A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+LXExtension.m"; sourceTree = "<group>"; };
+		CAB31B0B1D8FD88B008F84CB /* UIView+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+LXExtension.h"; sourceTree = "<group>"; };
+		CAB31B0C1D8FD88B008F84CB /* UIView+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+LXExtension.m"; sourceTree = "<group>"; };
+		CAB31B0E1D8FD88B008F84CB /* LXTabBarcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBarcontroller.h; sourceTree = "<group>"; };
+		CAB31B0F1D8FD88B008F84CB /* LXTabBarcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBarcontroller.m; sourceTree = "<group>"; };
+		CAB31B101D8FD88B008F84CB /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CAB31B111D8FD88B008F84CB /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		CAB31B131D8FD88B008F84CB /* LXTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTabBar.h; sourceTree = "<group>"; };
+		CAB31B141D8FD88B008F84CB /* LXTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTabBar.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,25 +76,7 @@
 		CAB31ABB1D8F968F008F84CB /* 百思不得姐 */ = {
 			isa = PBXGroup;
 			children = (
-				CAB31ABF1D8F968F008F84CB /* AppDelegate.h */,
-				CAB31AC01D8F968F008F84CB /* AppDelegate.m */,
-				CAB31AD31D8FB25C008F84CB /* LXTabBarcontroller.h */,
-				CAB31AD41D8FB25C008F84CB /* LXTabBarcontroller.m */,
-				CAB31AD61D8FBD4E008F84CB /* LXEssenceViewController.h */,
-				CAB31AD71D8FBD4E008F84CB /* LXEssenceViewController.m */,
-				CAB31AD91D8FBD6B008F84CB /* LXNewViewController.h */,
-				CAB31ADA1D8FBD6B008F84CB /* LXNewViewController.m */,
-				CAB31ADC1D8FBD8E008F84CB /* LXFriendTrendsViewController.h */,
-				CAB31ADD1D8FBD8E008F84CB /* LXFriendTrendsViewController.m */,
-				CAB31ADF1D8FBDA1008F84CB /* LXMeViewController.h */,
-				CAB31AE01D8FBDA1008F84CB /* LXMeViewController.m */,
-				CAB31AE21D8FBFBD008F84CB /* LXTabBar.h */,
-				CAB31AE31D8FBFBD008F84CB /* LXTabBar.m */,
-				CAB31AE51D8FC965008F84CB /* UIView+LXExtension.h */,
-				CAB31AE61D8FC965008F84CB /* UIView+LXExtension.m */,
-				CAB31AE91D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.h */,
-				CAB31AEA1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m */,
-				CAB31AE81D8FCA2C008F84CB /* PrefixHeader.pch */,
+				CAB31AEC1D8FD88B008F84CB /* Classes */,
 				CAB31ABC1D8F968F008F84CB /* Supporting Files */,
 			);
 			path = "百思不得姐";
@@ -105,9 +87,195 @@
 			children = (
 				CAB31AC81D8F968F008F84CB /* Images.xcassets */,
 				CAB31ACD1D8F968F008F84CB /* Info.plist */,
-				CAB31ABD1D8F968F008F84CB /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAB31AEC1D8FD88B008F84CB /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31AED1D8FD88B008F84CB /* Essence */,
+				CAB31AFF1D8FD88B008F84CB /* New */,
+				CAB31AF31D8FD88B008F84CB /* FriendTrends */,
+				CAB31AF91D8FD88B008F84CB /* Me */,
+				CAB31B051D8FD88B008F84CB /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		CAB31AED1D8FD88B008F84CB /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31AEE1D8FD88B008F84CB /* Controller */,
+				CAB31AF11D8FD88B008F84CB /* Model */,
+				CAB31AF21D8FD88B008F84CB /* View */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		CAB31AEE1D8FD88B008F84CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31AEF1D8FD88B008F84CB /* LXEssenceViewController.h */,
+				CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CAB31AF11D8FD88B008F84CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAB31AF21D8FD88B008F84CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAB31AF31D8FD88B008F84CB /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31AF41D8FD88B008F84CB /* Controller */,
+				CAB31AF71D8FD88B008F84CB /* Model */,
+				CAB31AF81D8FD88B008F84CB /* View */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		CAB31AF41D8FD88B008F84CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31AF51D8FD88B008F84CB /* LXFriendTrendsViewController.h */,
+				CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CAB31AF71D8FD88B008F84CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAB31AF81D8FD88B008F84CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAB31AF91D8FD88B008F84CB /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31AFA1D8FD88B008F84CB /* Controller */,
+				CAB31AFD1D8FD88B008F84CB /* Model */,
+				CAB31AFE1D8FD88B008F84CB /* View */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		CAB31AFA1D8FD88B008F84CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31AFB1D8FD88B008F84CB /* LXMeViewController.h */,
+				CAB31AFC1D8FD88B008F84CB /* LXMeViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CAB31AFD1D8FD88B008F84CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAB31AFE1D8FD88B008F84CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAB31AFF1D8FD88B008F84CB /* New */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31B001D8FD88B008F84CB /* Controller */,
+				CAB31B031D8FD88B008F84CB /* Model */,
+				CAB31B041D8FD88B008F84CB /* View */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		CAB31B001D8FD88B008F84CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31B011D8FD88B008F84CB /* LXNewViewController.h */,
+				CAB31B021D8FD88B008F84CB /* LXNewViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CAB31B031D8FD88B008F84CB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CAB31B041D8FD88B008F84CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CAB31B051D8FD88B008F84CB /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31B0D1D8FD88B008F84CB /* Controller */,
+				CAB31B121D8FD88B008F84CB /* View */,
+				CAB31B081D8FD88B008F84CB /* Category */,
+				CAB31B061D8FD88B008F84CB /* AppDelegate.h */,
+				CAB31B071D8FD88B008F84CB /* AppDelegate.m */,
+				CAB31B101D8FD88B008F84CB /* main.m */,
+				CAB31B111D8FD88B008F84CB /* PrefixHeader.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		CAB31B081D8FD88B008F84CB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31B091D8FD88B008F84CB /* UIBarButtonItem+LXExtension.h */,
+				CAB31B0A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m */,
+				CAB31B0B1D8FD88B008F84CB /* UIView+LXExtension.h */,
+				CAB31B0C1D8FD88B008F84CB /* UIView+LXExtension.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		CAB31B0D1D8FD88B008F84CB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31B0E1D8FD88B008F84CB /* LXTabBarcontroller.h */,
+				CAB31B0F1D8FD88B008F84CB /* LXTabBarcontroller.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CAB31B121D8FD88B008F84CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CAB31B131D8FD88B008F84CB /* LXTabBar.h */,
+				CAB31B141D8FD88B008F84CB /* LXTabBar.m */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,16 +347,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CAB31ADE1D8FBD8E008F84CB /* LXFriendTrendsViewController.m in Sources */,
-				CAB31AC11D8F968F008F84CB /* AppDelegate.m in Sources */,
-				CAB31AEB1D8FCDBE008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
-				CAB31AD81D8FBD4E008F84CB /* LXEssenceViewController.m in Sources */,
-				CAB31AD51D8FB25C008F84CB /* LXTabBarcontroller.m in Sources */,
-				CAB31AE71D8FC965008F84CB /* UIView+LXExtension.m in Sources */,
-				CAB31ABE1D8F968F008F84CB /* main.m in Sources */,
-				CAB31AE41D8FBFBD008F84CB /* LXTabBar.m in Sources */,
-				CAB31ADB1D8FBD6B008F84CB /* LXNewViewController.m in Sources */,
-				CAB31AE11D8FBDA1008F84CB /* LXMeViewController.m in Sources */,
+				CAB31B161D8FD88B008F84CB /* LXFriendTrendsViewController.m in Sources */,
+				CAB31B181D8FD88B008F84CB /* LXNewViewController.m in Sources */,
+				CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */,
+				CAB31B1C1D8FD88B008F84CB /* LXTabBarcontroller.m in Sources */,
+				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
+				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
+				CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
+				CAB31B1D1D8FD88B008F84CB /* main.m in Sources */,
+				CAB31B191D8FD88B008F84CB /* AppDelegate.m in Sources */,
+				CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,7 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -296,7 +464,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
+				GCC_PREFIX_HEADER = "百思不得姐/Classes/Other/PrefixHeader.pch";
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

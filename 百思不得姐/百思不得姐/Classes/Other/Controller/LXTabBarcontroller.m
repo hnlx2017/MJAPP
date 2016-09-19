@@ -13,7 +13,12 @@
 #import "LXMeViewController.h"
 #import "LXTabBar.h"
 
+
+
 @implementation LXTabBarcontroller
+
+
+
 - (void)viewDidLoad{
     [super viewDidLoad];
     
@@ -40,6 +45,7 @@
     [self setupChildVC:[[LXMeViewController alloc]init] title:@"我" image:@"tabBar_me_icon" selectedImage:@"tabBar_me_click_icon"];
     
     [self setValue:[[LXTabBar alloc]init] forKeyPath:@"tabBar"];
+
     
   
    
@@ -51,9 +57,11 @@
     vc.navigationItem.title = title;
     [vc.tabBarItem setImage:[UIImage imageNamed:image]];
     [vc.tabBarItem setSelectedImage:[UIImage imageNamed:seletedImage]];
-    vc.view.backgroundColor = [UIColor colorWithRed:arc4random_uniform(100)/100.0 green:arc4random_uniform(100)/100.0 blue:arc4random_uniform(100)/100.0 alpha:1.0];
     vc.tabBarItem.title = title;
     UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    
+     [[UINavigationBar appearanceWhenContainedIn:[nav class], nil] setBackgroundImage:[UIImage imageNamed:@"navigationbarBackgroundWhite"] forBarMetrics:UIBarMetricsDefault];
+  
     [self addChildViewController:nav];
 }
 
