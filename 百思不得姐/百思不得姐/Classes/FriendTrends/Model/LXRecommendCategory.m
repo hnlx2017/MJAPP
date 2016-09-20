@@ -9,5 +9,13 @@
 #import "LXRecommendCategory.h"
 
 @implementation LXRecommendCategory
+/** <#注释#> */
+- (NSMutableArray *)users{
+    if (!_users) {
+        _users = [NSMutableArray array];
+    }
+    return _users;
+}
+
 
 @end

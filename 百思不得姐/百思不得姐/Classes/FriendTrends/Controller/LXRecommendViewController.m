@@ -26,8 +26,7 @@
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 类别数据 */
 @property (nonatomic,strong) NSArray *categories;
-/** 用户数据 */
-@property (nonatomic,strong) NSArray *users;
+
 @end
 
 @implementation LXRecommendViewController
@@ -82,7 +81,9 @@ static NSString *const LXUserID = @"User";
     if (self.categoryTableView == tableView) {
          return self.categories.count;
     }else{
-        return self.users.count;
+        LXRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        
+        return c.users.count;
     }
 }
 
@@ -94,7 +95,8 @@ static NSString *const LXUserID = @"User";
       return cell;
     }else{
         LXRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:LXUserID];
-        cell.user = self.users[indexPath.row];
+         LXRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+        cell.user = c.users[indexPath.row];
         
         return cell;
     }
@@ -111,6 +113,12 @@ static NSString *const LXUserID = @"User";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LXRecommendCategory *c = self.categories[indexPath.row];
     LXLog(@"%@",c.name);
+    //判断右边曾经是不是有数据
+    if (c.users.count) {
+        [self.userTableView reloadData];
+    }else{
+    
+    
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
@@ -118,20 +126,20 @@ static NSString *const LXUserID = @"User";
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
       //字典数组转模型数组
-      self.users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+      NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
        
-      
+        [c.users addObjectsFromArray:users];
         [self.userTableView reloadData];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
-
+    }
 }
 
 /**
- *  1.目前只能显示1页数据
- 2.重复发送请求
+ 1.重复发送请求
+ 2.目前只能显示1页数据
  3.网络慢带来的细节问题
  */
 
