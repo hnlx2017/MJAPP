@@ -10,10 +10,13 @@
 #import <AFNetworking.h>
 #import <SVProgressHUD.h>
 #import <MJExtension.h>
+#import <MJRefresh.h>
 #import "LXRecommendCategoryCell.h"
 #import "LXRecommendUserCell.h"
 #import "LXRecommendCategory.h"
 #import "LXRecommendUser.h"
+
+#define LXSelectdeCategory self.categories[self.categoryTableView.indexPathForSelectedRow.row]
 
 @interface LXRecommendViewController ()<UITableViewDataSource,UITableViewDelegate>
 /**
@@ -39,10 +42,10 @@ static NSString *const LXUserID = @"User";
 //        
 //        
 //    }];
-    
+    //控件初始化
     [self setupTableView];
-    
-   
+    //添加刷新控件
+    [self setupRefresh];
     self.navigationItem.title = @"推荐关注";
     self.view.backgroundColor = LXGlobalBg;
     
@@ -67,6 +70,9 @@ static NSString *const LXUserID = @"User";
   
 }
 
+/**
+ *  控件初始化
+ */
 - (void)setupTableView{
      [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LXRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:LXCategoryID];
     [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LXRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:LXUserID];
@@ -76,14 +82,48 @@ static NSString *const LXUserID = @"User";
     self.userTableView.contentInset = self.categoryTableView.contentInset;
 }
 
+
+/**
+ *  添加刷新控件
+ */
+- (void)setupRefresh{
+    self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+    self.userTableView.mj_footer.hidden = YES;
+    
+}
+
+#pragma mark - 加载用户数据
+- (void)loadMoreUsers{
+    LXRecommendCategory *category = LXSelectdeCategory;
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(category.id);
+    params[@"page"] = @"2";
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //字典数组转模型数组
+        NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        
+        [category.users addObjectsFromArray:users];
+        [self.userTableView reloadData];
+        [self.userTableView.mj_footer endRefreshing];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
+    }];
+
+}
+
 #pragma mark -<UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (self.categoryTableView == tableView) {
          return self.categories.count;
     }else{
-        LXRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
+       
+        NSInteger count = [LXSelectdeCategory users].count;
+        self.userTableView.mj_footer.hidden = ( count == 0);
         
-        return c.users.count;
+        return count;
     }
 }
 
@@ -95,18 +135,15 @@ static NSString *const LXUserID = @"User";
       return cell;
     }else{
         LXRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:LXUserID];
-         LXRecommendCategory *c = self.categories[self.categoryTableView.indexPathForSelectedRow.row];
-        cell.user = c.users[indexPath.row];
+       
+        cell.user = [LXSelectdeCategory users][indexPath.row];
         
         return cell;
     }
    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
+
 
 
 #pragma mark - <UITableViewDelegate>
@@ -117,12 +154,15 @@ static NSString *const LXUserID = @"User";
     if (c.users.count) {
         [self.userTableView reloadData];
     }else{
-    
-    
+        /**
+         *  马上刷新数据
+         */
+     [self.userTableView reloadData];
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(c.id);
+ 
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
       //字典数组转模型数组
