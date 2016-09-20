@@ -21,4 +21,7 @@
  *  每个用户保存它右边的数据
  */
 @property (nonatomic,strong) NSMutableArray *users;
+/** 当前页码 */
+@property (nonatomic,assign) NSInteger currentPage;
+
 @end

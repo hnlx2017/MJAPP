@@ -99,7 +99,7 @@ static NSString *const LXUserID = @"User";
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(category.id);
-    params[@"page"] = @"2";
+    params[@"page"] = @(++category.currentPage);
     
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //字典数组转模型数组
@@ -107,7 +107,13 @@ static NSString *const LXUserID = @"User";
         
         [category.users addObjectsFromArray:users];
         [self.userTableView reloadData];
-        [self.userTableView.mj_footer endRefreshing];
+       
+        //让底部控件刷新
+        if (category.users.count == category.total) {//全部加载完毕
+            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+        }else{
+             [self.userTableView.mj_footer endRefreshing];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
@@ -149,6 +155,7 @@ static NSString *const LXUserID = @"User";
 #pragma mark - <UITableViewDelegate>
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     LXRecommendCategory *c = self.categories[indexPath.row];
+    
     LXLog(@"%@",c.name);
     //判断右边曾经是不是有数据
     if (c.users.count) {
@@ -158,19 +165,23 @@ static NSString *const LXUserID = @"User";
          *  马上刷新数据
          */
      [self.userTableView reloadData];
+        
+        c.currentPage = 1;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     params[@"a"] = @"list";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(c.id);
  
-    
     [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
       //字典数组转模型数组
       NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
        
         [c.users addObjectsFromArray:users];
+        c.total = [responseObject[@"total"] integerValue];
         [self.userTableView reloadData];
-        
+        if (c.users.count == c.total) {//全部加载完毕
+            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+        }
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];

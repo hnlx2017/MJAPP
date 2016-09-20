@@ -9,7 +9,7 @@
 #import "LXRecommendCategory.h"
 
 @implementation LXRecommendCategory
-/** <#注释#> */
+/** 类别有多个用户 */
 - (NSMutableArray *)users{
     if (!_users) {
         _users = [NSMutableArray array];
