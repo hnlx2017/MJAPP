@@ -7,6 +7,8 @@
 //
 
 #import "LXRecommendViewController.h"
+#import <AFNetworking.h>
+#import <SVProgressHUD.h>
 
 @interface LXRecommendViewController ()
 
@@ -16,7 +18,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    self.navigationItem.title = @"推荐关注";
+    self.view.backgroundColor = LXGlobalBg;
+    
+    [SVProgressHUD show];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"category";
+    params[@"c"] = @"subscribe";
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        [SVProgressHUD dismiss];
+        LXLog(@"%@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
+    }];
+  
 }
 
 - (void)didReceiveMemoryWarning {

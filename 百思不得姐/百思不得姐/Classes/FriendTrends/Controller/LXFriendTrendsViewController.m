@@ -7,11 +7,13 @@
 //
 
 #import "LXFriendTrendsViewController.h"
+#import "LXRecommendViewController.h"
 
 @implementation LXFriendTrendsViewController
 - (void)viewDidLoad{
     [super viewDidLoad];
     self.navigationItem.title = @"我的关注";
+
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:@"friendsRecommentIcon" highImage:@"friendsRecommentIcon-click" target:self action:@selector(friendsClick)];
     LXLogFunc;
@@ -20,7 +22,9 @@
 }
 
 - (void)friendsClick{
-    LXLogFunc;
+    
+    [self.navigationController pushViewController:[[LXRecommendViewController alloc]init] animated:YES];
+   
 }
                                              
 @end
