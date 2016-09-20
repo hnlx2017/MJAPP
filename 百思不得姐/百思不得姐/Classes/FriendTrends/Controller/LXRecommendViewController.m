@@ -11,19 +11,28 @@
 #import <SVProgressHUD.h>
 #import <MJExtension.h>
 #import "LXRecommendCategoryCell.h"
+#import "LXRecommendUserCell.h"
 #import "LXRecommendCategory.h"
+#import "LXRecommendUser.h"
 
 @interface LXRecommendViewController ()<UITableViewDataSource,UITableViewDelegate>
 /**
  *  左边的类别表格
  */
+@property (weak, nonatomic) IBOutlet UITableView *userTableView;
+/**
+ *  右边的用户表格
+ */
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
-/** 类别数组 */
+/** 类别数据 */
 @property (nonatomic,strong) NSArray *categories;
+/** 用户数据 */
+@property (nonatomic,strong) NSArray *users;
 @end
 
 @implementation LXRecommendViewController
 static NSString *const LXCategoryID = @"Category";
+static NSString *const LXUserID = @"User";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,7 +41,9 @@ static NSString *const LXCategoryID = @"Category";
 //        
 //    }];
     
-    [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LXRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:LXCategoryID];
+    [self setupTableView];
+    
+   
     self.navigationItem.title = @"推荐关注";
     self.view.backgroundColor = LXGlobalBg;
     
@@ -57,17 +68,37 @@ static NSString *const LXCategoryID = @"Category";
   
 }
 
+- (void)setupTableView{
+     [self.categoryTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LXRecommendCategoryCell class]) bundle:nil] forCellReuseIdentifier:LXCategoryID];
+    [self.userTableView registerNib:[UINib nibWithNibName:NSStringFromClass([LXRecommendUserCell class]) bundle:nil] forCellReuseIdentifier:LXUserID];
+    self.userTableView.rowHeight = 70;
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
+    self.userTableView.contentInset = self.categoryTableView.contentInset;
+}
+
 #pragma mark -<UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.categories.count;
+    if (self.categoryTableView == tableView) {
+         return self.categories.count;
+    }else{
+        return self.users.count;
+    }
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if (self.categoryTableView == tableView) {
+         LXRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:LXCategoryID];
     
-    LXRecommendCategoryCell *cell = [tableView dequeueReusableCellWithIdentifier:LXCategoryID];
-    
-    cell.category = self.categories[indexPath.row];
-    return cell;
+       cell.category = self.categories[indexPath.row];
+      return cell;
+    }else{
+        LXRecommendUserCell *cell = [tableView dequeueReusableCellWithIdentifier:LXUserID];
+        cell.user = self.users[indexPath.row];
+        
+        return cell;
+    }
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -75,14 +106,33 @@ static NSString *const LXCategoryID = @"Category";
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - <UITableViewDelegate>
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    LXRecommendCategory *c = self.categories[indexPath.row];
+    LXLog(@"%@",c.name);
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(c.id);
+    
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+      //字典数组转模型数组
+      self.users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+       
+      
+        [self.userTableView reloadData];
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
+    }];
+
 }
-*/
+
+/**
+ *  1.目前只能显示1页数据
+ 2.重复发送请求
+ 3.网络慢带来的细节问题
+ */
 
 @end

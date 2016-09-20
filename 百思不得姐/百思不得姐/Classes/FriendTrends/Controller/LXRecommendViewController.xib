@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LXRecommendViewController">
             <connections>
                 <outlet property="categoryTableView" destination="4sX-qZ-6ep" id="ooN-wX-oIV"/>
+                <outlet property="userTableView" destination="vEe-kh-0R1" id="ahb-jM-eD1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -27,12 +28,23 @@
                         <outlet property="delegate" destination="-1" id="4gx-Pq-8Cd"/>
                     </connections>
                 </tableView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vEe-kh-0R1" userLabel="右侧">
+                    <rect key="frame" x="70" y="0.0" width="305" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="eTt-7e-wq9"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="vEe-kh-0R1" firstAttribute="leading" secondItem="4sX-qZ-6ep" secondAttribute="trailing" id="0hq-Oc-IkA"/>
                 <constraint firstAttribute="bottom" secondItem="4sX-qZ-6ep" secondAttribute="bottom" id="1A2-hh-iw6"/>
+                <constraint firstItem="vEe-kh-0R1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="OA2-ED-oIB"/>
                 <constraint firstItem="4sX-qZ-6ep" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Pcy-Ck-H3n"/>
                 <constraint firstItem="4sX-qZ-6ep" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="YzY-e4-EpO"/>
+                <constraint firstAttribute="trailing" secondItem="vEe-kh-0R1" secondAttribute="trailing" id="n7Q-Lh-pfa"/>
+                <constraint firstAttribute="bottom" secondItem="vEe-kh-0R1" secondAttribute="bottom" id="p5A-CV-bsI"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="415.5" y="306.5"/>

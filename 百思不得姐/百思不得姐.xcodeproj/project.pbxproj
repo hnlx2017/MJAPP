@@ -27,6 +27,9 @@
 		CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC551D90DAF500209277 /* LXRecommendCategory.m */; };
 		CAFECC5A1D90DAFE00209277 /* LXRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC581D90DAFE00209277 /* LXRecommendCategoryCell.m */; };
 		CAFECC5B1D90DAFE00209277 /* LXRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFECC591D90DAFE00209277 /* LXRecommendCategoryCell.xib */; };
+		CAFECC5F1D910F0400209277 /* LXRecommendUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC5D1D910F0400209277 /* LXRecommendUserCell.m */; };
+		CAFECC601D910F0400209277 /* LXRecommendUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFECC5E1D910F0400209277 /* LXRecommendUserCell.xib */; };
+		CAFECC631D91131500209277 /* LXRecommendUser.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC621D91131500209277 /* LXRecommendUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +71,11 @@
 		CAFECC571D90DAFE00209277 /* LXRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendCategoryCell.h; sourceTree = "<group>"; };
 		CAFECC581D90DAFE00209277 /* LXRecommendCategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendCategoryCell.m; sourceTree = "<group>"; };
 		CAFECC591D90DAFE00209277 /* LXRecommendCategoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendCategoryCell.xib; sourceTree = "<group>"; };
+		CAFECC5C1D910F0400209277 /* LXRecommendUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendUserCell.h; sourceTree = "<group>"; };
+		CAFECC5D1D910F0400209277 /* LXRecommendUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendUserCell.m; sourceTree = "<group>"; };
+		CAFECC5E1D910F0400209277 /* LXRecommendUserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendUserCell.xib; sourceTree = "<group>"; };
+		CAFECC611D91131500209277 /* LXRecommendUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendUser.h; sourceTree = "<group>"; };
+		CAFECC621D91131500209277 /* LXRecommendUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +200,8 @@
 			children = (
 				CAFECC541D90DAF500209277 /* LXRecommendCategory.h */,
 				CAFECC551D90DAF500209277 /* LXRecommendCategory.m */,
+				CAFECC611D91131500209277 /* LXRecommendUser.h */,
+				CAFECC621D91131500209277 /* LXRecommendUser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +212,9 @@
 				CAFECC571D90DAFE00209277 /* LXRecommendCategoryCell.h */,
 				CAFECC581D90DAFE00209277 /* LXRecommendCategoryCell.m */,
 				CAFECC591D90DAFE00209277 /* LXRecommendCategoryCell.xib */,
+				CAFECC5C1D910F0400209277 /* LXRecommendUserCell.h */,
+				CAFECC5D1D910F0400209277 /* LXRecommendUserCell.m */,
+				CAFECC5E1D910F0400209277 /* LXRecommendUserCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -399,6 +412,7 @@
 				CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */,
 				CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */,
 				CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */,
+				CAFECC601D910F0400209277 /* LXRecommendUserCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -464,12 +478,14 @@
 				CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */,
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
+				CAFECC631D91131500209277 /* LXRecommendUser.m in Sources */,
 				CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
 				CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */,
 				CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */,
 				CAFECC5A1D90DAFE00209277 /* LXRecommendCategoryCell.m in Sources */,
 				CAB31B1D1D8FD88B008F84CB /* main.m in Sources */,
 				CAB6241B1D90CC470057EBCE /* Foundation+Log.m in Sources */,
+				CAFECC5F1D910F0400209277 /* LXRecommendUserCell.m in Sources */,
 				CAB31B191D8FD88B008F84CB /* AppDelegate.m in Sources */,
 				CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */,
 			);
