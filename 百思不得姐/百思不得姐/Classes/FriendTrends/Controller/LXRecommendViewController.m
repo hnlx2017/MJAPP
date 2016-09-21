@@ -87,12 +87,43 @@ static NSString *const LXUserID = @"User";
  *  添加刷新控件
  */
 - (void)setupRefresh{
+    self.userTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadNewUsers)];
+    
+    
     self.userTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
     self.userTableView.mj_footer.hidden = YES;
     
 }
 
 #pragma mark - 加载用户数据
+- (void)loadNewUsers{
+    LXRecommendCategory *rc = LXSelectdeCategory;
+    
+    rc.currentPage = 1;
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    params[@"a"] = @"list";
+    params[@"c"] = @"subscribe";
+    params[@"category_id"] = @(rc.id);
+    params[@"page"] = @(rc.currentPage);
+    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        //字典数组转模型数组
+        NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
+        //清除所有旧数据
+        [rc.users removeAllObjects];
+        [rc.users addObjectsFromArray:users];
+        rc.total = [responseObject[@"total"] integerValue];
+        [self.userTableView reloadData];
+        
+        [self.userTableView.mj_header endRefreshing];
+        
+        [self checkFooterState];
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
+         [self.userTableView.mj_header endRefreshing];
+    }];
+    
+}
+
 - (void)loadMoreUsers{
     LXRecommendCategory *category = LXSelectdeCategory;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
@@ -108,29 +139,36 @@ static NSString *const LXUserID = @"User";
         [category.users addObjectsFromArray:users];
         [self.userTableView reloadData];
        
-        //让底部控件刷新
-        if (category.users.count == category.total) {//全部加载完毕
-            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
-        }else{
-             [self.userTableView.mj_footer endRefreshing];
-        }
+        [self checkFooterState];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
+          [self.userTableView.mj_footer endRefreshing];
     }];
 
 }
+/**
+ *  时刻监测footer的状态
+ */
+
+- (void)checkFooterState{
+      LXRecommendCategory *rc = LXSelectdeCategory;
+     self.userTableView.mj_footer.hidden = ( rc.users.count == 0);
+    if (rc.users.count == rc.total) {//全部加载完毕
+        [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+    }else{
+        [self.userTableView.mj_footer endRefreshing];
+    }
+}
 
 #pragma mark -<UITableViewDataSource>
+//每次刷新都会来到这个方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if (self.categoryTableView == tableView) {
-         return self.categories.count;
-    }else{
-       
-        NSInteger count = [LXSelectdeCategory users].count;
-        self.userTableView.mj_footer.hidden = ( count == 0);
-        
-        return count;
-    }
+    if (self.categoryTableView == tableView) return self.categories.count;
+   
+    //监测footer
+        [self checkFooterState];
+        return [LXSelectdeCategory users].count;
+    
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -154,38 +192,27 @@ static NSString *const LXUserID = @"User";
 
 #pragma mark - <UITableViewDelegate>
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    LXRecommendCategory *c = self.categories[indexPath.row];
     
-    LXLog(@"%@",c.name);
-    //判断右边曾经是不是有数据
-    if (c.users.count) {
-        [self.userTableView reloadData];
-    }else{
-        /**
-         *  马上刷新数据
-         */
-     [self.userTableView reloadData];
+    if (self.categoryTableView == tableView) {
+        LXRecommendCategory *c = self.categories[indexPath.row];
         
-        c.currentPage = 1;
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    params[@"a"] = @"list";
-    params[@"c"] = @"subscribe";
-    params[@"category_id"] = @(c.id);
- 
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-      //字典数组转模型数组
-      NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-       
-        [c.users addObjectsFromArray:users];
-        c.total = [responseObject[@"total"] integerValue];
-        [self.userTableView reloadData];
-        if (c.users.count == c.total) {//全部加载完毕
-            [self.userTableView.mj_footer endRefreshingWithNoMoreData];
+        LXLog(@"%@",c.name);
+        //判断右边曾经是不是有数据
+        if (c.users.count) {
+            [self.userTableView reloadData];
+        }else{
+            /**
+             *  马上刷新数据
+             */
+            [self.userTableView reloadData];
+            
+            [self.userTableView.mj_header beginRefreshing];
         }
-    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
-        [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
-    }];
+
+    }else{
+        
     }
+    
 }
 
 /**
