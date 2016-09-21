@@ -29,12 +29,26 @@
 @property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
 /** 类别数据 */
 @property (nonatomic,strong) NSArray *categories;
+/** 请求参数 */
+@property (nonatomic,strong) NSMutableDictionary *params;
+/** AFN的请求管理者 */
+@property (nonatomic,strong) AFHTTPSessionManager *manager;
 
 @end
 
 @implementation LXRecommendViewController
 static NSString *const LXCategoryID = @"Category";
 static NSString *const LXUserID = @"User";
+
+/** AFN的请求管理者 */
+- (AFHTTPSessionManager *)manager{
+    if (!_manager) {
+        _manager = [AFHTTPSessionManager manager];
+    }
+    return _manager;
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -42,12 +56,19 @@ static NSString *const LXUserID = @"User";
 //        
 //        
 //    }];
+    self.navigationItem.title = @"推荐关注";
+    self.view.backgroundColor = LXGlobalBg;
     //控件初始化
     [self setupTableView];
     //添加刷新控件
     [self setupRefresh];
-    self.navigationItem.title = @"推荐关注";
-    self.view.backgroundColor = LXGlobalBg;
+    
+    [self loadCategories];
+    
+}
+
+- (void)loadCategories{
+   
     
     [SVProgressHUD show];
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
@@ -56,20 +77,19 @@ static NSString *const LXUserID = @"User";
     params[@"a"] = @"category";
     params[@"c"] = @"subscribe";
     
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
         self.categories = [LXRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         LXLog(@"%@",responseObject);
-       
+        
         [self.categoryTableView reloadData];
         [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
-  
-}
 
+}
 /**
  *  控件初始化
  */
@@ -95,6 +115,8 @@ static NSString *const LXUserID = @"User";
     
 }
 
+
+
 #pragma mark - 加载用户数据
 - (void)loadNewUsers{
     LXRecommendCategory *rc = LXSelectdeCategory;
@@ -105,7 +127,9 @@ static NSString *const LXUserID = @"User";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(rc.id);
     params[@"page"] = @(rc.currentPage);
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    self.params = params;
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (self.params != params) return;
         //字典数组转模型数组
         NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         //清除所有旧数据
@@ -118,11 +142,14 @@ static NSString *const LXUserID = @"User";
         
         [self checkFooterState];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         if (self.params != params) return;
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
          [self.userTableView.mj_header endRefreshing];
     }];
     
 }
+
+
 
 - (void)loadMoreUsers{
     LXRecommendCategory *category = LXSelectdeCategory;
@@ -131,27 +158,30 @@ static NSString *const LXUserID = @"User";
     params[@"c"] = @"subscribe";
     params[@"category_id"] = @(category.id);
     params[@"page"] = @(++category.currentPage);
-    
-    [[AFHTTPSessionManager manager] GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+     self.params = params;
+    [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+         if (self.params != params) return;
         //字典数组转模型数组
         NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [category.users addObjectsFromArray:users];
         [self.userTableView reloadData];
-       
+    
         [self checkFooterState];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+         if (self.params != params) return;
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
           [self.userTableView.mj_footer endRefreshing];
     }];
 
 }
 /**
- *  时刻监测footer的状态
+ *  时刻监测footer的显示状态
  */
 
 - (void)checkFooterState{
       LXRecommendCategory *rc = LXSelectdeCategory;
+    //如果右边没有数据，让它隐藏
      self.userTableView.mj_footer.hidden = ( rc.users.count == 0);
     if (rc.users.count == rc.total) {//全部加载完毕
         [self.userTableView.mj_footer endRefreshingWithNoMoreData];
@@ -165,7 +195,7 @@ static NSString *const LXUserID = @"User";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     if (self.categoryTableView == tableView) return self.categories.count;
    
-    //监测footer
+    //监测footer是否加载完毕
         [self checkFooterState];
         return [LXSelectdeCategory users].count;
     
@@ -194,6 +224,10 @@ static NSString *const LXUserID = @"User";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
     if (self.categoryTableView == tableView) {
+        //先结束刷新
+        [self.userTableView.mj_header endRefreshingCompletionBlock];
+        [self.userTableView.mj_footer endRefreshing];
+        
         LXRecommendCategory *c = self.categories[indexPath.row];
         
         LXLog(@"%@",c.name);
@@ -215,9 +249,16 @@ static NSString *const LXUserID = @"User";
     
 }
 
+-(void)dealloc{
+    
+    //停止管理者中的所有请求操作（一旦退出控制器，避免出现崩溃）
+    [self.manager.operationQueue cancelAllOperations];
+}
+
 /**
- 1.重复发送请求
- 2.目前只能显示1页数据
+ *
+ 1.重复发送请求--param来判断最后一次请求，对最后一次请求才去处理
+ 2.目前只能显示1页数据--对总数判断，请求页数++
  3.网络慢带来的细节问题
  */
 
