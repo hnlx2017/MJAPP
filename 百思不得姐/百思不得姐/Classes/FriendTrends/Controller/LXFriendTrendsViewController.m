@@ -8,6 +8,8 @@
 
 #import "LXFriendTrendsViewController.h"
 #import "LXRecommendViewController.h"
+#import "LXLoginRegisterViewController.h"
+
 
 @implementation LXFriendTrendsViewController
 - (void)viewDidLoad{
@@ -25,6 +27,11 @@
     
     [self.navigationController pushViewController:[[LXRecommendViewController alloc]init] animated:YES];
    
+}
+- (IBAction)loginRegister:(id)sender {
+    
+    [self presentViewController:[[LXLoginRegisterViewController alloc]init] animated:YES completion:nil];
+    
 }
                                              
 @end
