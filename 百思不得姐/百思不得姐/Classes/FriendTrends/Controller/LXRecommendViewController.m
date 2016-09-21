@@ -84,7 +84,7 @@ static NSString *const LXUserID = @"User";
         
         [self.categoryTableView reloadData];
         [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
-        
+        [self.userTableView.mj_header beginRefreshing];
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载推荐信息失败!"];
     }];
@@ -129,13 +129,14 @@ static NSString *const LXUserID = @"User";
     params[@"page"] = @(rc.currentPage);
     self.params = params;
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        if (self.params != params) return;
+     
         //字典数组转模型数组
         NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         //清除所有旧数据
         [rc.users removeAllObjects];
         [rc.users addObjectsFromArray:users];
         rc.total = [responseObject[@"total"] integerValue];
+        if (self.params != params) return;
         [self.userTableView reloadData];
         
         [self.userTableView.mj_header endRefreshing];
@@ -160,11 +161,12 @@ static NSString *const LXUserID = @"User";
     params[@"page"] = @(++category.currentPage);
      self.params = params;
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-         if (self.params != params) return;
+        
         //字典数组转模型数组
         NSArray *users =  [LXRecommendUser mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
         
         [category.users addObjectsFromArray:users];
+        if (self.params != params) return;
         [self.userTableView reloadData];
     
         [self checkFooterState];
