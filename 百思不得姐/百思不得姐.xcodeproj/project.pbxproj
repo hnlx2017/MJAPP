@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		2EF0EAD657157061F43F8505 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A14E566B40E70D3068B1AAD /* libPods-百思不得姐.a */; };
+		CAB1ACDE1D925712000F2700 /* LXRecommendTagsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB1ACDD1D925712000F2700 /* LXRecommendTagsTableViewController.m */; };
+		CAB1ACE11D926233000F2700 /* LXRecommendTag.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB1ACE01D926233000F2700 /* LXRecommendTag.m */; };
+		CAB1ACE51D9263EF000F2700 /* LXRecommendTagCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB1ACE31D9263EF000F2700 /* LXRecommendTagCell.m */; };
+		CAB1ACE61D9263EF000F2700 /* LXRecommendTagCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB1ACE41D9263EF000F2700 /* LXRecommendTagCell.xib */; };
 		CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB31AC81D8F968F008F84CB /* Images.xcassets */; };
 		CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */; };
 		CAB31B161D8FD88B008F84CB /* LXFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */; };
@@ -36,6 +40,13 @@
 		1341D2DD0EE221EFA9300328 /* Pods-百思不得姐.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.debug.xcconfig"; sourceTree = "<group>"; };
 		4A14E566B40E70D3068B1AAD /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1C2F9074372BEDA92B994F3 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
+		CAB1ACDC1D925712000F2700 /* LXRecommendTagsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendTagsTableViewController.h; sourceTree = "<group>"; };
+		CAB1ACDD1D925712000F2700 /* LXRecommendTagsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendTagsTableViewController.m; sourceTree = "<group>"; };
+		CAB1ACDF1D926233000F2700 /* LXRecommendTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendTag.h; sourceTree = "<group>"; };
+		CAB1ACE01D926233000F2700 /* LXRecommendTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendTag.m; sourceTree = "<group>"; };
+		CAB1ACE21D9263EF000F2700 /* LXRecommendTagCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendTagCell.h; sourceTree = "<group>"; };
+		CAB1ACE31D9263EF000F2700 /* LXRecommendTagCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendTagCell.m; sourceTree = "<group>"; };
+		CAB1ACE41D9263EF000F2700 /* LXRecommendTagCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendTagCell.xib; sourceTree = "<group>"; };
 		CAB31AB91D8F968F008F84CB /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB31AC81D8F968F008F84CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAB31ACD1D8F968F008F84CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -154,6 +165,8 @@
 			children = (
 				CAB31AEF1D8FD88B008F84CB /* LXEssenceViewController.h */,
 				CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */,
+				CAB1ACDC1D925712000F2700 /* LXRecommendTagsTableViewController.h */,
+				CAB1ACDD1D925712000F2700 /* LXRecommendTagsTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,6 +174,8 @@
 		CAB31AF11D8FD88B008F84CB /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CAB1ACDF1D926233000F2700 /* LXRecommendTag.h */,
+				CAB1ACE01D926233000F2700 /* LXRecommendTag.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +183,9 @@
 		CAB31AF21D8FD88B008F84CB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				CAB1ACE21D9263EF000F2700 /* LXRecommendTagCell.h */,
+				CAB1ACE31D9263EF000F2700 /* LXRecommendTagCell.m */,
+				CAB1ACE41D9263EF000F2700 /* LXRecommendTagCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -413,6 +431,7 @@
 				CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */,
 				CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */,
 				CAFECC601D910F0400209277 /* LXRecommendUserCell.xib in Resources */,
+				CAB1ACE61D9263EF000F2700 /* LXRecommendTagCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,17 +494,20 @@
 				CAB31B181D8FD88B008F84CB /* LXNewViewController.m in Sources */,
 				CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */,
 				CAB31B1C1D8FD88B008F84CB /* LXTabBarcontroller.m in Sources */,
+				CAB1ACE11D926233000F2700 /* LXRecommendTag.m in Sources */,
 				CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */,
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
 				CAFECC631D91131500209277 /* LXRecommendUser.m in Sources */,
 				CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
+				CAB1ACDE1D925712000F2700 /* LXRecommendTagsTableViewController.m in Sources */,
 				CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */,
 				CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */,
 				CAFECC5A1D90DAFE00209277 /* LXRecommendCategoryCell.m in Sources */,
 				CAB31B1D1D8FD88B008F84CB /* main.m in Sources */,
 				CAB6241B1D90CC470057EBCE /* Foundation+Log.m in Sources */,
 				CAFECC5F1D910F0400209277 /* LXRecommendUserCell.m in Sources */,
+				CAB1ACE51D9263EF000F2700 /* LXRecommendTagCell.m in Sources */,
 				CAB31B191D8FD88B008F84CB /* AppDelegate.m in Sources */,
 				CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */,
 			);
