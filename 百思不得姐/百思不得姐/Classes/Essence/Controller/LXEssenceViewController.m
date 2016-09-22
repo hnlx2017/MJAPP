@@ -12,6 +12,8 @@
 
 /** indicator */
 @property (nonatomic,weak) UIView *indicatorV;
+/** 上一次点击的按钮 */
+@property (nonatomic,weak) UIButton  *preButton;
 @end
 
 @implementation LXEssenceViewController
@@ -39,25 +41,13 @@
     
     [self.view addSubview:titlesView];
     
+    
+    
     NSArray *titles = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     
     
     CGFloat width = titlesView.width / titles.count;
     CGFloat height = titlesView.height;
-    
-    for (int i = 0; i< titles.count ; i++) {
-        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-        btn.width = width;
-        btn.height = height;
-        btn.x = i * width;
-        
-        [btn setTitle:titles[i] forState:UIControlStateNormal];
-        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
-        btn.titleLabel.font = [UIFont systemFontOfSize:14];
-        [btn addTarget:self action:@selector(changeItem:) forControlEvents:UIControlEventTouchUpInside];
-        [titlesView addSubview:btn];
-        
-    }
     
     UIView *indicatorV = [[UIView alloc]init];
     indicatorV.backgroundColor = [UIColor redColor];
@@ -67,10 +57,43 @@
     [titlesView addSubview:indicatorV];
     self.indicatorV = indicatorV;
     
+    for (int i = 0; i< titles.count ; i++) {
+        UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+        btn.width = width;
+        btn.height = height;
+        btn.x = i * width;
+        
+        [btn setTitle:titles[i] forState:UIControlStateNormal];
+        [btn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+        /**
+         *  利用UIControlStateDisabled让Btn只能点击一次
+         */
+//        [btn layoutIfNeeded];
+        [btn setTitleColor:[UIColor redColor] forState:UIControlStateDisabled];
+        btn.titleLabel.font = [UIFont systemFontOfSize:14];
+        [btn addTarget:self action:@selector(changeItem:) forControlEvents:UIControlEventTouchUpInside];
+        [titlesView addSubview:btn];
+        if (i == 0) {
+            self.preButton.enabled = YES;
+            btn.enabled = NO;
+            self.preButton = btn;
+            [btn.titleLabel sizeToFit];
+            self.indicatorV.width = btn.titleLabel.width;
+            self.indicatorV.centerX = btn.centerX;
+        }
+        
+    }
+    
+   
+    
 }
 
 
 - (void)changeItem:(UIButton *)btn{
+    
+    self.preButton.enabled = YES;
+    btn.enabled = NO;
+    self.preButton = btn;
     
     
     [UIView animateWithDuration:0.25 animations:^{
