@@ -31,6 +31,7 @@
 		CAB6241B1D90CC470057EBCE /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6241A1D90CC470057EBCE /* Foundation+Log.m */; };
 		CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABD07F11D905CED00764BCC /* LXRecommendViewController.m */; };
 		CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */; };
+		CAFB6BA41D93899900948C90 /* LXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6BA31D93899900948C90 /* LXTextField.m */; };
 		CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC551D90DAF500209277 /* LXRecommendCategory.m */; };
 		CAFECC5A1D90DAFE00209277 /* LXRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC581D90DAFE00209277 /* LXRecommendCategoryCell.m */; };
 		CAFECC5B1D90DAFE00209277 /* LXRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFECC591D90DAFE00209277 /* LXRecommendCategoryCell.xib */; };
@@ -85,6 +86,8 @@
 		CABD07F01D905CED00764BCC /* LXRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendViewController.h; sourceTree = "<group>"; };
 		CABD07F11D905CED00764BCC /* LXRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendViewController.m; sourceTree = "<group>"; };
 		CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendViewController.xib; sourceTree = "<group>"; };
+		CAFB6BA21D93899900948C90 /* LXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTextField.h; sourceTree = "<group>"; };
+		CAFB6BA31D93899900948C90 /* LXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTextField.m; sourceTree = "<group>"; };
 		CAFECC541D90DAF500209277 /* LXRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendCategory.h; sourceTree = "<group>"; };
 		CAFECC551D90DAF500209277 /* LXRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendCategory.m; sourceTree = "<group>"; };
 		CAFECC571D90DAFE00209277 /* LXRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendCategoryCell.h; sourceTree = "<group>"; };
@@ -246,6 +249,8 @@
 				CAFECC5E1D910F0400209277 /* LXRecommendUserCell.xib */,
 				CAB1ACEC1D92A317000F2700 /* LXVerticalButton.h */,
 				CAB1ACED1D92A317000F2700 /* LXVerticalButton.m */,
+				CAFB6BA21D93899900948C90 /* LXTextField.h */,
+				CAFB6BA31D93899900948C90 /* LXTextField.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -513,6 +518,7 @@
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
 				CAFECC631D91131500209277 /* LXRecommendUser.m in Sources */,
+				CAFB6BA41D93899900948C90 /* LXTextField.m in Sources */,
 				CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
 				CAB1ACDE1D925712000F2700 /* LXRecommendTagsTableViewController.m in Sources */,
 				CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */,

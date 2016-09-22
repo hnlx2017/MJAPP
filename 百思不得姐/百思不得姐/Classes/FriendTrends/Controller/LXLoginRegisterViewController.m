@@ -23,12 +23,12 @@
 //    NSAttributedString *placeholder = [[NSAttributedString alloc]initWithString:@"手机号" attributes:attrs];
    // self.phoneField.attributedPlaceholder = placeholder;
     // Do any additional setup after loading the view from its nib.
-     NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc]initWithString:@"手机号"];
-    [placeholder setAttributes:@{
-                                 NSForegroundColorAttributeName:[UIColor redColor],
-                                 NSFontAttributeName:[UIFont systemFontOfSize:16]
-                                } range:NSMakeRange(0, 1)];
-    self.phoneField.attributedPlaceholder = placeholder;
+//     NSMutableAttributedString *placeholder = [[NSMutableAttributedString alloc]initWithString:@"手机号"];
+//    [placeholder setAttributes:@{
+//                                 NSForegroundColorAttributeName:[UIColor redColor],
+//                                 NSFontAttributeName:[UIFont systemFontOfSize:16]
+//                                } range:NSMakeRange(0, 1)];
+//    self.phoneField.attributedPlaceholder = placeholder;
 }
 
 
