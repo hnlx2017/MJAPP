@@ -51,7 +51,7 @@ static NSString *const LXTagId = @"tag";
         [SVProgressHUD dismiss];
         self.tags = [LXRecommendTag mj_objectArrayWithKeyValuesArray:responseObject];
         [self.tableView reloadData];
-        LXLog(@"%@",responseObject);
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [SVProgressHUD showErrorWithStatus:@"加载数据失败!"];
         

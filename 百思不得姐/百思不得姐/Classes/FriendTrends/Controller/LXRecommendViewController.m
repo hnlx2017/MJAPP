@@ -80,7 +80,7 @@ static NSString *const LXUserID = @"User";
     [self.manager GET:@"http://api.budejie.com/api/api_open.php" parameters:params progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         [SVProgressHUD dismiss];
         self.categories = [LXRecommendCategory mj_objectArrayWithKeyValuesArray:responseObject[@"list"]];
-        LXLog(@"%@",responseObject);
+    
         
         [self.categoryTableView reloadData];
         [self.categoryTableView selectRowAtIndexPath:[NSIndexPath indexPathForRow:0 inSection:0] animated:NO scrollPosition:UITableViewScrollPositionTop];
@@ -232,7 +232,7 @@ static NSString *const LXUserID = @"User";
         
         LXRecommendCategory *c = self.categories[indexPath.row];
         
-        LXLog(@"%@",c.name);
+       
         //判断右边曾经是不是有数据
         if (c.users.count) {
             [self.userTableView reloadData];

@@ -25,7 +25,7 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated{
     
     
-    LXLog(@"count = %zd",self.viewControllers.count);
+  
     if (self.viewControllers.count > 0) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         [button setTitle:@"返回" forState:UIControlStateNormal];
