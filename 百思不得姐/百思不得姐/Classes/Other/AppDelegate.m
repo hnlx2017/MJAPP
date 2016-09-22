@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "LXTabBarcontroller.h"
+#import "LXPushGuideView.h"
 
 @interface AppDelegate ()
 
@@ -23,6 +24,11 @@
     
     self.window.rootViewController = tabBarVC;
     [self.window makeKeyAndVisible];
+    [LXPushGuideView show];
+    
+  
+    
+    
     return YES;
 }
 

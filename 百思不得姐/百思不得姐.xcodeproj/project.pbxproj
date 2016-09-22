@@ -32,6 +32,8 @@
 		CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABD07F11D905CED00764BCC /* LXRecommendViewController.m */; };
 		CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */; };
 		CAFB6BA41D93899900948C90 /* LXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6BA31D93899900948C90 /* LXTextField.m */; };
+		CAFB6BA71D93BE1200948C90 /* LXPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6BA61D93BE1200948C90 /* LXPushGuideView.m */; };
+		CAFB6BA91D93BE2100948C90 /* LXPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFB6BA81D93BE2100948C90 /* LXPushGuideView.xib */; };
 		CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC551D90DAF500209277 /* LXRecommendCategory.m */; };
 		CAFECC5A1D90DAFE00209277 /* LXRecommendCategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFECC581D90DAFE00209277 /* LXRecommendCategoryCell.m */; };
 		CAFECC5B1D90DAFE00209277 /* LXRecommendCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFECC591D90DAFE00209277 /* LXRecommendCategoryCell.xib */; };
@@ -88,6 +90,9 @@
 		CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendViewController.xib; sourceTree = "<group>"; };
 		CAFB6BA21D93899900948C90 /* LXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTextField.h; sourceTree = "<group>"; };
 		CAFB6BA31D93899900948C90 /* LXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTextField.m; sourceTree = "<group>"; };
+		CAFB6BA51D93BE1200948C90 /* LXPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPushGuideView.h; sourceTree = "<group>"; };
+		CAFB6BA61D93BE1200948C90 /* LXPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPushGuideView.m; sourceTree = "<group>"; };
+		CAFB6BA81D93BE2100948C90 /* LXPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXPushGuideView.xib; sourceTree = "<group>"; };
 		CAFECC541D90DAF500209277 /* LXRecommendCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendCategory.h; sourceTree = "<group>"; };
 		CAFECC551D90DAF500209277 /* LXRecommendCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendCategory.m; sourceTree = "<group>"; };
 		CAFECC571D90DAFE00209277 /* LXRecommendCategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendCategoryCell.h; sourceTree = "<group>"; };
@@ -362,6 +367,9 @@
 			children = (
 				CAB31B131D8FD88B008F84CB /* LXTabBar.h */,
 				CAB31B141D8FD88B008F84CB /* LXTabBar.m */,
+				CAFB6BA51D93BE1200948C90 /* LXPushGuideView.h */,
+				CAFB6BA61D93BE1200948C90 /* LXPushGuideView.m */,
+				CAFB6BA81D93BE2100948C90 /* LXPushGuideView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -445,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAFECC5B1D90DAFE00209277 /* LXRecommendCategoryCell.xib in Resources */,
+				CAFB6BA91D93BE2100948C90 /* LXPushGuideView.xib in Resources */,
 				CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */,
 				CAB1ACEB1D9294B5000F2700 /* LXLoginRegisterViewController.xib in Resources */,
 				CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */,
@@ -510,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CAB31B161D8FD88B008F84CB /* LXFriendTrendsViewController.m in Sources */,
+				CAFB6BA71D93BE1200948C90 /* LXPushGuideView.m in Sources */,
 				CAB31B181D8FD88B008F84CB /* LXNewViewController.m in Sources */,
 				CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */,
 				CAB31B1C1D8FD88B008F84CB /* LXTabBarcontroller.m in Sources */,
