@@ -9,11 +9,15 @@
 #import "LXLoginRegisterViewController.h"
 
 @interface LXLoginRegisterViewController ()
-@property (weak, nonatomic) IBOutlet UITextField *phoneField;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *loginLeadingConstraint;
+
 
 @end
 
 @implementation LXLoginRegisterViewController
+- (IBAction)back:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -29,6 +33,28 @@
 //                                 NSFontAttributeName:[UIFont systemFontOfSize:16]
 //                                } range:NSMakeRange(0, 1)];
 //    self.phoneField.attributedPlaceholder = placeholder;
+}
+- (IBAction)loginRegister:(UIButton *)button {
+    
+   
+    if (self.loginLeadingConstraint.constant == 0) {
+         self.loginLeadingConstraint.constant = -self.view.width;
+//          button.selected = YES;
+        [button setTitle:@"已有帐号" forState:UIControlStateNormal];
+    }else{
+        self.loginLeadingConstraint.constant = 0;
+       [button setTitle:@"登录注册" forState:UIControlStateNormal];
+//        button.selected = NO;
+    }
+    
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        [self.view layoutIfNeeded];
+    }];
+
+    
+   
+    
 }
 
 
