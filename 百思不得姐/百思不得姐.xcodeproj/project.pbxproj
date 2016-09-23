@@ -31,6 +31,11 @@
 		CAB6241B1D90CC470057EBCE /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6241A1D90CC470057EBCE /* Foundation+Log.m */; };
 		CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABD07F11D905CED00764BCC /* LXRecommendViewController.m */; };
 		CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */; };
+		CAF71E411D94D527009B49C9 /* LXAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E401D94D527009B49C9 /* LXAllViewController.m */; };
+		CAF71E441D94D53A009B49C9 /* LXVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E431D94D53A009B49C9 /* LXVideoViewController.m */; };
+		CAF71E471D94D556009B49C9 /* LXVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E461D94D556009B49C9 /* LXVoiceViewController.m */; };
+		CAF71E4A1D94D56C009B49C9 /* LXPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E491D94D56C009B49C9 /* LXPictureViewController.m */; };
+		CAF71E4D1D94D580009B49C9 /* LXWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E4C1D94D580009B49C9 /* LXWordViewController.m */; };
 		CAFB6BA41D93899900948C90 /* LXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6BA31D93899900948C90 /* LXTextField.m */; };
 		CAFB6BA71D93BE1200948C90 /* LXPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6BA61D93BE1200948C90 /* LXPushGuideView.m */; };
 		CAFB6BA91D93BE2100948C90 /* LXPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFB6BA81D93BE2100948C90 /* LXPushGuideView.xib */; };
@@ -88,6 +93,16 @@
 		CABD07F01D905CED00764BCC /* LXRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendViewController.h; sourceTree = "<group>"; };
 		CABD07F11D905CED00764BCC /* LXRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendViewController.m; sourceTree = "<group>"; };
 		CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendViewController.xib; sourceTree = "<group>"; };
+		CAF71E3F1D94D527009B49C9 /* LXAllViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXAllViewController.h; sourceTree = "<group>"; };
+		CAF71E401D94D527009B49C9 /* LXAllViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXAllViewController.m; sourceTree = "<group>"; };
+		CAF71E421D94D53A009B49C9 /* LXVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXVideoViewController.h; sourceTree = "<group>"; };
+		CAF71E431D94D53A009B49C9 /* LXVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXVideoViewController.m; sourceTree = "<group>"; };
+		CAF71E451D94D556009B49C9 /* LXVoiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXVoiceViewController.h; sourceTree = "<group>"; };
+		CAF71E461D94D556009B49C9 /* LXVoiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXVoiceViewController.m; sourceTree = "<group>"; };
+		CAF71E481D94D56C009B49C9 /* LXPictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPictureViewController.h; sourceTree = "<group>"; };
+		CAF71E491D94D56C009B49C9 /* LXPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPictureViewController.m; sourceTree = "<group>"; };
+		CAF71E4B1D94D580009B49C9 /* LXWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXWordViewController.h; sourceTree = "<group>"; };
+		CAF71E4C1D94D580009B49C9 /* LXWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXWordViewController.m; sourceTree = "<group>"; };
 		CAFB6BA21D93899900948C90 /* LXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTextField.h; sourceTree = "<group>"; };
 		CAFB6BA31D93899900948C90 /* LXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTextField.m; sourceTree = "<group>"; };
 		CAFB6BA51D93BE1200948C90 /* LXPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPushGuideView.h; sourceTree = "<group>"; };
@@ -183,6 +198,16 @@
 				CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */,
 				CAB1ACDC1D925712000F2700 /* LXRecommendTagsTableViewController.h */,
 				CAB1ACDD1D925712000F2700 /* LXRecommendTagsTableViewController.m */,
+				CAF71E3F1D94D527009B49C9 /* LXAllViewController.h */,
+				CAF71E401D94D527009B49C9 /* LXAllViewController.m */,
+				CAF71E421D94D53A009B49C9 /* LXVideoViewController.h */,
+				CAF71E431D94D53A009B49C9 /* LXVideoViewController.m */,
+				CAF71E451D94D556009B49C9 /* LXVoiceViewController.h */,
+				CAF71E461D94D556009B49C9 /* LXVoiceViewController.m */,
+				CAF71E481D94D56C009B49C9 /* LXPictureViewController.h */,
+				CAF71E491D94D56C009B49C9 /* LXPictureViewController.m */,
+				CAF71E4B1D94D580009B49C9 /* LXWordViewController.h */,
+				CAF71E4C1D94D580009B49C9 /* LXWordViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -521,9 +546,12 @@
 				CAB31B161D8FD88B008F84CB /* LXFriendTrendsViewController.m in Sources */,
 				CAFB6BA71D93BE1200948C90 /* LXPushGuideView.m in Sources */,
 				CAB31B181D8FD88B008F84CB /* LXNewViewController.m in Sources */,
+				CAF71E4D1D94D580009B49C9 /* LXWordViewController.m in Sources */,
 				CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */,
 				CAB31B1C1D8FD88B008F84CB /* LXTabBarcontroller.m in Sources */,
 				CAB1ACE11D926233000F2700 /* LXRecommendTag.m in Sources */,
+				CAF71E441D94D53A009B49C9 /* LXVideoViewController.m in Sources */,
+				CAF71E4A1D94D56C009B49C9 /* LXPictureViewController.m in Sources */,
 				CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */,
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
@@ -536,12 +564,14 @@
 				CAFECC5A1D90DAFE00209277 /* LXRecommendCategoryCell.m in Sources */,
 				CAB31B1D1D8FD88B008F84CB /* main.m in Sources */,
 				CAB1ACEE1D92A317000F2700 /* LXVerticalButton.m in Sources */,
+				CAF71E471D94D556009B49C9 /* LXVoiceViewController.m in Sources */,
 				CAB1ACEA1D9294B5000F2700 /* LXLoginRegisterViewController.m in Sources */,
 				CAB6241B1D90CC470057EBCE /* Foundation+Log.m in Sources */,
 				CAFECC5F1D910F0400209277 /* LXRecommendUserCell.m in Sources */,
 				CAB1ACE51D9263EF000F2700 /* LXRecommendTagCell.m in Sources */,
 				CAB31B191D8FD88B008F84CB /* AppDelegate.m in Sources */,
 				CAB31B1E1D8FD88B008F84CB /* LXTabBar.m in Sources */,
+				CAF71E411D94D527009B49C9 /* LXAllViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
