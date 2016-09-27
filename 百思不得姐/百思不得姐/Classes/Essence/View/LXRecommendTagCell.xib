@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -16,6 +16,7 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="blt-bl-GjO">
                         <rect key="frame" x="8" y="31" width="50" height="50"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="width" constant="50" id="B4C-i4-vpx"/>
                             <constraint firstAttribute="height" constant="50" id="EAW-Pk-65j"/>
@@ -23,6 +24,7 @@
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jd9-0A-1Sq">
                         <rect key="frame" x="287" y="43" width="50" height="25"/>
+                        <animations/>
                         <constraints>
                             <constraint firstAttribute="height" constant="25" id="724-Dh-HAD"/>
                             <constraint firstAttribute="width" constant="50" id="jJc-jk-c1o"/>
@@ -37,17 +39,20 @@
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WDH-Hh-QgR">
                         <rect key="frame" x="68" y="31" width="209" height="21"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mPU-1b-yt1">
                         <rect key="frame" x="68" y="65" width="33" height="16"/>
+                        <animations/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
+                <animations/>
                 <constraints>
                     <constraint firstItem="WDH-Hh-QgR" firstAttribute="leading" secondItem="blt-bl-GjO" secondAttribute="trailing" constant="10" id="5S1-zs-sgj"/>
                     <constraint firstItem="blt-bl-GjO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Cz5-ZD-5Jy"/>
@@ -60,6 +65,7 @@
                     <constraint firstItem="WDH-Hh-QgR" firstAttribute="top" secondItem="blt-bl-GjO" secondAttribute="top" id="qin-HP-Oqb"/>
                 </constraints>
             </tableViewCellContentView>
+            <animations/>
             <connections>
                 <outlet property="image_listImageView" destination="blt-bl-GjO" id="0jf-WL-SF8"/>
                 <outlet property="sub_numberLabel" destination="mPU-1b-yt1" id="AjS-x5-Hep"/>

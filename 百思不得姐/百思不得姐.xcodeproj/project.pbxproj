@@ -36,6 +36,7 @@
 		CAF71E471D94D556009B49C9 /* LXVoiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E461D94D556009B49C9 /* LXVoiceViewController.m */; };
 		CAF71E4A1D94D56C009B49C9 /* LXPictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E491D94D56C009B49C9 /* LXPictureViewController.m */; };
 		CAF71E4D1D94D580009B49C9 /* LXWordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E4C1D94D580009B49C9 /* LXWordViewController.m */; };
+		CAF71E501D95214C009B49C9 /* LXTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E4F1D95214C009B49C9 /* LXTopic.m */; };
 		CAFB6BA41D93899900948C90 /* LXTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6BA31D93899900948C90 /* LXTextField.m */; };
 		CAFB6BA71D93BE1200948C90 /* LXPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = CAFB6BA61D93BE1200948C90 /* LXPushGuideView.m */; };
 		CAFB6BA91D93BE2100948C90 /* LXPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAFB6BA81D93BE2100948C90 /* LXPushGuideView.xib */; };
@@ -103,6 +104,8 @@
 		CAF71E491D94D56C009B49C9 /* LXPictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXPictureViewController.m; sourceTree = "<group>"; };
 		CAF71E4B1D94D580009B49C9 /* LXWordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXWordViewController.h; sourceTree = "<group>"; };
 		CAF71E4C1D94D580009B49C9 /* LXWordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXWordViewController.m; sourceTree = "<group>"; };
+		CAF71E4E1D95214C009B49C9 /* LXTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTopic.h; sourceTree = "<group>"; };
+		CAF71E4F1D95214C009B49C9 /* LXTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTopic.m; sourceTree = "<group>"; };
 		CAFB6BA21D93899900948C90 /* LXTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTextField.h; sourceTree = "<group>"; };
 		CAFB6BA31D93899900948C90 /* LXTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTextField.m; sourceTree = "<group>"; };
 		CAFB6BA51D93BE1200948C90 /* LXPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXPushGuideView.h; sourceTree = "<group>"; };
@@ -217,6 +220,8 @@
 			children = (
 				CAB1ACDF1D926233000F2700 /* LXRecommendTag.h */,
 				CAB1ACE01D926233000F2700 /* LXRecommendTag.m */,
+				CAF71E4E1D95214C009B49C9 /* LXTopic.h */,
+				CAF71E4F1D95214C009B49C9 /* LXTopic.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -446,7 +451,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LX;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = kmznst;
 				TargetAttributes = {
 					CAB31AB81D8F968F008F84CB = {
@@ -552,6 +557,7 @@
 				CAB1ACE11D926233000F2700 /* LXRecommendTag.m in Sources */,
 				CAF71E441D94D53A009B49C9 /* LXVideoViewController.m in Sources */,
 				CAF71E4A1D94D56C009B49C9 /* LXPictureViewController.m in Sources */,
+				CAF71E501D95214C009B49C9 /* LXTopic.m in Sources */,
 				CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */,
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
@@ -592,8 +598,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -615,7 +623,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -636,8 +644,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -653,7 +663,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

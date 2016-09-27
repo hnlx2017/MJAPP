@@ -9,17 +9,20 @@
 #import "LXNewViewController.h"
 
 @implementation LXNewViewController
+
 - (void)viewDidLoad{
     [super viewDidLoad];
-    self.navigationItem.titleView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
-    
+    self.navigationItem.titleView         = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"MainTitle"]];
+
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithimage:@"MainTagSubIcon" highImage:@"MainTagSubIconClick" target:self action:@selector(newClick)];
     LXLogFunc;
-    self.view.backgroundColor = LXGlobalBg;
+    self.view.backgroundColor             = LXGlobalBg;
 }
 
+
 - (void)newClick{
-    UIViewController *vc = [[UIViewController alloc]init];
+    
+    UIViewController *vc    = [[UIViewController alloc]init];
     vc.view.backgroundColor = [UIColor purpleColor];
     [self.navigationController pushViewController:vc animated:YES];
 }

@@ -21,8 +21,10 @@
     return self;
 }
 
+
 - (void)awakeFromNib{
     [self setup];
+    [super awakeFromNib];
 }
 
 - (void)layoutSubviews{

@@ -1,14 +1,13 @@
 //
-//  LXWordViewController.h
+//  LXTopic.m
 //  百思不得姐
 //
 //  Created by LiuXing on 16/9/23.
 //  Copyright © 2016年 kmznst. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "LXTopic.h"
 
-@interface LXWordViewController : UITableViewController
-
+@implementation LXTopic
 
 @end

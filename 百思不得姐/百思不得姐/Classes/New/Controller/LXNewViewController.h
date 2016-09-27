@@ -10,4 +10,5 @@
 
 @interface LXNewViewController : UIViewController
 
+
 @end

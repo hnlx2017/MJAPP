@@ -24,6 +24,7 @@
 
 //运行时查找属性
 - (void)awakeFromNib{
+    [super awakeFromNib];
 //    //复制属性列表
 //    unsigned int count  = 0;
 //    //指向属性首地址的指针
