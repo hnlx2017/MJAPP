@@ -198,13 +198,7 @@
     vc.view.x = self.contentView.contentOffset.x;
     vc.view.y = 0;
     vc.view.height = self.contentView.height;
-    CGFloat bottom = self.tabBarController.tabBar.height;
-    CGFloat top = CGRectGetMaxY(self.titlesView.frame);
-    vc.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
-    //滚动条的内边距
-    
-    vc.tableView.scrollIndicatorInsets =  vc.tableView.contentInset;
-    
+
     [self.contentView addSubview:vc.tableView];
      
 }

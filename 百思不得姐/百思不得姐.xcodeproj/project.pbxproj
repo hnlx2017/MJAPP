@@ -15,6 +15,7 @@
 		CAB1ACEA1D9294B5000F2700 /* LXLoginRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB1ACE81D9294B5000F2700 /* LXLoginRegisterViewController.m */; };
 		CAB1ACEB1D9294B5000F2700 /* LXLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB1ACE91D9294B5000F2700 /* LXLoginRegisterViewController.xib */; };
 		CAB1ACEE1D92A317000F2700 /* LXVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB1ACED1D92A317000F2700 /* LXVerticalButton.m */; };
+		CAB24DEF1D9A623D00B60B10 /* LXConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB24DEE1D9A623D00B60B10 /* LXConst.m */; };
 		CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB31AC81D8F968F008F84CB /* Images.xcassets */; };
 		CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */; };
 		CAB31B161D8FD88B008F84CB /* LXFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */; };
@@ -64,6 +65,8 @@
 		CAB1ACE91D9294B5000F2700 /* LXLoginRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXLoginRegisterViewController.xib; sourceTree = "<group>"; };
 		CAB1ACEC1D92A317000F2700 /* LXVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXVerticalButton.h; sourceTree = "<group>"; };
 		CAB1ACED1D92A317000F2700 /* LXVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXVerticalButton.m; sourceTree = "<group>"; };
+		CAB24DED1D9A623D00B60B10 /* LXConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXConst.h; sourceTree = "<group>"; };
+		CAB24DEE1D9A623D00B60B10 /* LXConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXConst.m; sourceTree = "<group>"; };
 		CAB31AB91D8F968F008F84CB /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB31AC81D8F968F008F84CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAB31ACD1D8F968F008F84CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -366,6 +369,8 @@
 				CAB31B071D8FD88B008F84CB /* AppDelegate.m */,
 				CAB31B101D8FD88B008F84CB /* main.m */,
 				CAB31B111D8FD88B008F84CB /* PrefixHeader.pch */,
+				CAB24DED1D9A623D00B60B10 /* LXConst.h */,
+				CAB24DEE1D9A623D00B60B10 /* LXConst.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -557,6 +562,7 @@
 				CAB1ACE11D926233000F2700 /* LXRecommendTag.m in Sources */,
 				CAF71E441D94D53A009B49C9 /* LXVideoViewController.m in Sources */,
 				CAF71E4A1D94D56C009B49C9 /* LXPictureViewController.m in Sources */,
+				CAB24DEF1D9A623D00B60B10 /* LXConst.m in Sources */,
 				CAF71E501D95214C009B49C9 /* LXTopic.m in Sources */,
 				CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */,
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,

@@ -42,11 +42,25 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    /** 初始化表格 */
+    [self setupTableView];
     // 加载刷新控件
     [self setupRefresh];
    
 
 }
+
+- (void)setupTableView{
+    CGFloat bottom = self.tabBarController.tabBar.height;
+    CGFloat top = LXTitilesViewY + LXTitilesViewH;
+    self.tableView.contentInset = UIEdgeInsetsMake(top, 0, bottom, 0);
+    //滚动条的内边距
+    
+    self.tableView.scrollIndicatorInsets =  self.tableView.contentInset;
+}
+
+
 /**
  *  加载刷新控件
  */
@@ -55,9 +69,9 @@
     self.tableView.mj_header.automaticallyChangeAlpha = YES;//隐藏透明度-下拉刷新
     [self.tableView.mj_header beginRefreshing];
 
-    self.tableView.mj_footer                          = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
+    self.tableView.mj_footer                          = [MJRefreshAutoNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadMoreUsers)];
     /** 一开始默认是隐藏的 */
-    //self.tableView.mj_footer.hidden                   = YES;
+    
     
     
     
@@ -123,7 +137,7 @@
 #pragma mark - Table view data source
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
+    self.tableView.mj_footer.hidden     =  (self.topics.count == 0);
     return self.topics.count;
 }
 
