@@ -8,6 +8,28 @@
 
 #import "LXTopicCell.h"
 #import "LXTopic.h"
+#import <UIImageView+WebCache.h>
+
+/**
+ *  Description
+ */
+@interface LXTopicCell ()
+/** 头像 */
+@property (weak, nonatomic) IBOutlet UIImageView *profile_imageView;
+/** 名称 */
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+/** 发贴时间 */
+@property (weak, nonatomic) IBOutlet UILabel *createTimeLable;
+/** ding */
+@property (weak, nonatomic) IBOutlet UIButton *dingButton;
+/** cai */
+@property (weak, nonatomic) IBOutlet UIButton *caiButton;
+/** 转发的数量 */
+@property (weak, nonatomic) IBOutlet UIButton *shareButton;
+/** 评论的数量 */
+@property (weak, nonatomic) IBOutlet UIButton *commentButton;
+
+@end
 
 @implementation LXTopicCell
 
@@ -20,6 +42,29 @@
 
 - (void)setTopic:(LXTopic *)topic{
     _topic = topic;
+    
+    [self.profile_imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
+    self.nameLabel.text = topic.name;
+    self.createTimeLable.text = topic.create_time;
+    
+    [self setupButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];
+    [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
+    [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
+    [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
+  
+    
+}
+
+/** 设置按钮内容 */
+- (void)setupButtonTitle:(UIButton *)button count:(NSInteger)count placeholder:(NSString *)placeholder
+{
+  
+    if (count > 10000) {
+        placeholder = [NSString stringWithFormat:@"%0.1f万",count/10000.0];
+    }else if(count > 0){
+        placeholder = [NSString stringWithFormat:@"%zd",count];
+    }
+    [button setTitle:placeholder forState:UIControlStateNormal];
     
 }
 

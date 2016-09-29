@@ -23,16 +23,16 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9og-3n-blu" userLabel="妮称">
-                        <rect key="frame" x="55" y="10" width="42" height="21"/>
+                        <rect key="frame" x="55" y="10" width="38" height="18"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7A-u9-2fJ" userLabel="发布时间">
-                        <rect key="frame" x="55" y="29" width="33" height="16"/>
+                        <rect key="frame" x="55" y="30" width="31" height="15"/>
                         <animations/>
-                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -172,6 +172,15 @@
                 </constraints>
             </tableViewCellContentView>
             <animations/>
+            <connections>
+                <outlet property="caiButton" destination="wom-gk-AlL" id="Dae-QJ-Nsk"/>
+                <outlet property="commentButton" destination="nQu-Xc-ceu" id="gqi-BL-pOe"/>
+                <outlet property="createTimeLable" destination="n7A-u9-2fJ" id="DKM-2b-YXP"/>
+                <outlet property="dingButton" destination="dzo-og-bRd" id="vnz-A6-PSH"/>
+                <outlet property="nameLabel" destination="9og-3n-blu" id="w19-mA-EVw"/>
+                <outlet property="profile_imageView" destination="gQw-5o-eKU" id="l7a-NY-dyF"/>
+                <outlet property="shareButton" destination="qzm-Wp-Ygv" id="7qi-na-8g3"/>
+            </connections>
             <point key="canvasLocation" x="481" y="367"/>
         </tableViewCell>
     </objects>
