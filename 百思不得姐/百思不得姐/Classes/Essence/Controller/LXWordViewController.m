@@ -12,6 +12,7 @@
 #import <MJExtension.h>
 #import "LXTopic.h"
 #import <MJRefresh.h>
+#import "LXTopicCell.h"
 
 
 @interface LXWordViewController ()
@@ -51,6 +52,7 @@
 
 }
 
+static NSString *LXTopicId = @"topic";
 - (void)setupTableView{
     CGFloat bottom = self.tabBarController.tabBar.height;
     CGFloat top = LXTitilesViewY + LXTitilesViewH;
@@ -58,6 +60,12 @@
     //滚动条的内边距
     
     self.tableView.scrollIndicatorInsets =  self.tableView.contentInset;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.backgroundColor = LXGlobalBg;
+    
+    /** 注册 */
+    [self.tableView registerNib:[UINib nibWithNibName:NSStringFromClass([LXTopicCell class]) bundle:nil] forCellReuseIdentifier:LXTopicId];
+    
 }
 
 
@@ -96,7 +104,7 @@
      
         [self.tableView reloadData];
         [self.tableView.mj_header endRefreshing];
-         self.page = 0;
+         self.page = 0;//加载成功才清零
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         [self.tableView.mj_header endRefreshing];
     }];
@@ -144,22 +152,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    static NSString *identifier = @"cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identifier];
-    }
-    LXTopic *topic            = self.topics[indexPath.row];
-    cell.textLabel.text       = topic.name;
-    cell.detailTextLabel.text = topic.text;
-    [cell.imageView sd_setImageWithURL:[NSURL URLWithString:topic.profile_image] placeholderImage:[UIImage imageNamed:@"defaultUserIcon"]];
-    
-    
+    LXTopicCell *cell = [tableView dequeueReusableCellWithIdentifier:LXTopicId];
+    cell.topic = self.topics[indexPath.row];
     return cell;
 }
 
 
-
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200;
+}
 
 
 

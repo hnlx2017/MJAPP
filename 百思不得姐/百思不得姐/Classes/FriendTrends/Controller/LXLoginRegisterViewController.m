@@ -35,7 +35,7 @@
 //    self.phoneField.attributedPlaceholder = placeholder;
 }
 - (IBAction)loginRegister:(UIButton *)button {
-    
+    [self.view endEditing:YES];
    
     if (self.loginLeadingConstraint.constant == 0) {
          self.loginLeadingConstraint.constant = -self.view.width;
@@ -57,6 +57,9 @@
     
 }
 
+-(void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
 
 // 设置状态栏
 - (UIStatusBarStyle)preferredStatusBarStyle{

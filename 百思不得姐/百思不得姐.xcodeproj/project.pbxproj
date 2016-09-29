@@ -16,6 +16,8 @@
 		CAB1ACEB1D9294B5000F2700 /* LXLoginRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB1ACE91D9294B5000F2700 /* LXLoginRegisterViewController.xib */; };
 		CAB1ACEE1D92A317000F2700 /* LXVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB1ACED1D92A317000F2700 /* LXVerticalButton.m */; };
 		CAB24DEF1D9A623D00B60B10 /* LXConst.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB24DEE1D9A623D00B60B10 /* LXConst.m */; };
+		CAB24DF31D9A804500B60B10 /* LXTopicCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB24DF11D9A804500B60B10 /* LXTopicCell.m */; };
+		CAB24DF41D9A804500B60B10 /* LXTopicCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB24DF21D9A804500B60B10 /* LXTopicCell.xib */; };
 		CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CAB31AC81D8F968F008F84CB /* Images.xcassets */; };
 		CAB31B151D8FD88B008F84CB /* LXEssenceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF01D8FD88B008F84CB /* LXEssenceViewController.m */; };
 		CAB31B161D8FD88B008F84CB /* LXFriendTrendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31AF61D8FD88B008F84CB /* LXFriendTrendsViewController.m */; };
@@ -67,6 +69,9 @@
 		CAB1ACED1D92A317000F2700 /* LXVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXVerticalButton.m; sourceTree = "<group>"; };
 		CAB24DED1D9A623D00B60B10 /* LXConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXConst.h; sourceTree = "<group>"; };
 		CAB24DEE1D9A623D00B60B10 /* LXConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXConst.m; sourceTree = "<group>"; };
+		CAB24DF01D9A804500B60B10 /* LXTopicCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTopicCell.h; sourceTree = "<group>"; };
+		CAB24DF11D9A804500B60B10 /* LXTopicCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTopicCell.m; sourceTree = "<group>"; };
+		CAB24DF21D9A804500B60B10 /* LXTopicCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXTopicCell.xib; sourceTree = "<group>"; };
 		CAB31AB91D8F968F008F84CB /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAB31AC81D8F968F008F84CB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CAB31ACD1D8F968F008F84CB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,6 +240,9 @@
 				CAB1ACE21D9263EF000F2700 /* LXRecommendTagCell.h */,
 				CAB1ACE31D9263EF000F2700 /* LXRecommendTagCell.m */,
 				CAB1ACE41D9263EF000F2700 /* LXRecommendTagCell.xib */,
+				CAB24DF01D9A804500B60B10 /* LXTopicCell.h */,
+				CAB24DF11D9A804500B60B10 /* LXTopicCell.m */,
+				CAB24DF21D9A804500B60B10 /* LXTopicCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -493,6 +501,7 @@
 				CAB1ACEB1D9294B5000F2700 /* LXLoginRegisterViewController.xib in Resources */,
 				CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */,
 				CAB31AC91D8F968F008F84CB /* Images.xcassets in Resources */,
+				CAB24DF41D9A804500B60B10 /* LXTopicCell.xib in Resources */,
 				CAFECC601D910F0400209277 /* LXRecommendUserCell.xib in Resources */,
 				CAB1ACE61D9263EF000F2700 /* LXRecommendTagCell.xib in Resources */,
 			);
@@ -564,6 +573,7 @@
 				CAF71E4A1D94D56C009B49C9 /* LXPictureViewController.m in Sources */,
 				CAB24DEF1D9A623D00B60B10 /* LXConst.m in Sources */,
 				CAF71E501D95214C009B49C9 /* LXTopic.m in Sources */,
+				CAB24DF31D9A804500B60B10 /* LXTopicCell.m in Sources */,
 				CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */,
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
