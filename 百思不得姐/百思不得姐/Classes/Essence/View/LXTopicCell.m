@@ -47,11 +47,29 @@
     self.nameLabel.text = topic.name;
     self.createTimeLable.text = topic.create_time;
     
+    NSDateFormatter *dfm = [[NSDateFormatter alloc]init];
+    dfm.dateFormat = @"yyyy-MM-dd HH:mm:ss";
+    
+    /** 发贴时间 */
+    NSDate *create_time = [dfm dateFromString:topic.create_time];
+    /** 当前时间 */
+    NSDate *now = [NSDate date];
+    /** 日历类 拿到当前日历对象*/
+
+    LXLog(@"%@",topic.create_time);
+    LXLog(@"%@",[now deltaFrom:create_time]);
+    
     [self setupButtonTitle:self.dingButton count:topic.ding placeholder:@"顶"];
     [self setupButtonTitle:self.caiButton count:topic.cai placeholder:@"踩"];
     [self setupButtonTitle:self.shareButton count:topic.repost placeholder:@"分享"];
     [self setupButtonTitle:self.commentButton count:topic.comment placeholder:@"评论"];
-  
+    
+    
+}
+
+- (void)testDate{
+   
+    
     
 }
 

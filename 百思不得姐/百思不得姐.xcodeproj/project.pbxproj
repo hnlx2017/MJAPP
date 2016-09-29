@@ -32,6 +32,7 @@
 		CAB31B211D8FE0E3008F84CB /* LXNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */; };
 		CAB31B231D8FE867008F84CB /* LXFriendTrendsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */; };
 		CAB6241B1D90CC470057EBCE /* Foundation+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB6241A1D90CC470057EBCE /* Foundation+Log.m */; };
+		CAB75EA31D9D1860006B4D13 /* NSDate+LXExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = CAB75EA21D9D1860006B4D13 /* NSDate+LXExtension.m */; };
 		CABD07F31D905CED00764BCC /* LXRecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CABD07F11D905CED00764BCC /* LXRecommendViewController.m */; };
 		CABD07F41D905CED00764BCC /* LXRecommendViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */; };
 		CAF71E411D94D527009B49C9 /* LXAllViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CAF71E401D94D527009B49C9 /* LXAllViewController.m */; };
@@ -99,6 +100,8 @@
 		CAB31B201D8FE0E3008F84CB /* LXNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNavigationController.m; sourceTree = "<group>"; };
 		CAB31B221D8FE867008F84CB /* LXFriendTrendsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXFriendTrendsViewController.xib; sourceTree = "<group>"; };
 		CAB6241A1D90CC470057EBCE /* Foundation+Log.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Foundation+Log.m"; sourceTree = "<group>"; };
+		CAB75EA11D9D1860006B4D13 /* NSDate+LXExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+LXExtension.h"; sourceTree = "<group>"; };
+		CAB75EA21D9D1860006B4D13 /* NSDate+LXExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+LXExtension.m"; sourceTree = "<group>"; };
 		CABD07F01D905CED00764BCC /* LXRecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXRecommendViewController.h; sourceTree = "<group>"; };
 		CABD07F11D905CED00764BCC /* LXRecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXRecommendViewController.m; sourceTree = "<group>"; };
 		CABD07F21D905CED00764BCC /* LXRecommendViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LXRecommendViewController.xib; sourceTree = "<group>"; };
@@ -390,6 +393,8 @@
 				CAB31B0A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m */,
 				CAB31B0B1D8FD88B008F84CB /* UIView+LXExtension.h */,
 				CAB31B0C1D8FD88B008F84CB /* UIView+LXExtension.m */,
+				CAB75EA11D9D1860006B4D13 /* NSDate+LXExtension.h */,
+				CAB75EA21D9D1860006B4D13 /* NSDate+LXExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -577,6 +582,7 @@
 				CAFECC561D90DAF500209277 /* LXRecommendCategory.m in Sources */,
 				CAB31B171D8FD88B008F84CB /* LXMeViewController.m in Sources */,
 				CAB31B1B1D8FD88B008F84CB /* UIView+LXExtension.m in Sources */,
+				CAB75EA31D9D1860006B4D13 /* NSDate+LXExtension.m in Sources */,
 				CAFECC631D91131500209277 /* LXRecommendUser.m in Sources */,
 				CAFB6BA41D93899900948C90 /* LXTextField.m in Sources */,
 				CAB31B1A1D8FD88B008F84CB /* UIBarButtonItem+LXExtension.m in Sources */,
